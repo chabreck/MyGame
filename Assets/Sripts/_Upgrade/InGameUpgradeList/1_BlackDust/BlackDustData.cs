@@ -2,7 +2,7 @@
 using UnityEngine.Localization;
 
 [CreateAssetMenu(menuName = "Upgrades/Black Dust (Data)")]
-public class BlackDustData : UpgradeBase
+public class ToxicCloudData : UpgradeBase
 {
     [Header("Cloud params")]
     [Range(0f,1f)] public float cloudChance = 0.30f;
@@ -18,13 +18,13 @@ public class BlackDustData : UpgradeBase
     public float level5_convergeDamage = 30f;
 
     [Header("Visual prefab (optional)")]
-    public GameObject cloudPrefab; // префаб облака должен иметь BlackDustBullet компонент
+    public GameObject cloudPrefab;
 
     public override IUpgradeBehavior CreateBehavior(GameObject owner)
     {
         if (owner == null) return null;
-        var comp = owner.GetComponent<BlackDustUpgrade>();
-        if (comp == null) comp = owner.AddComponent<BlackDustUpgrade>();
+        var comp = owner.GetComponent<ToxicCloudUpgrade>();
+        if (comp == null) comp = owner.AddComponent<ToxicCloudUpgrade>();
         comp.Configure(this);
         return comp;
     }

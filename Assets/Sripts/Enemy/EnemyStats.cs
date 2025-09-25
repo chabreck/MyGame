@@ -82,7 +82,15 @@ public class EnemyStats : MonoBehaviour, IDamageable
 
     public void TakeDamage(float amount) => InternalTakeDamage(amount, DamagePopup.DamageType.Normal, allowCritical: true);
     public void TakeDamage(float amount, DamagePopup.DamageType damageType) => InternalTakeDamage(amount, damageType, allowCritical: true);
-    public void TakeRawDamage(float amount) => InternalTakeDamage(amount, DamagePopup.DamageType.Normal, allowCritical: false);
+    public void TakeRawDamage(float amount)
+    {
+        InternalTakeDamage(amount, DamagePopup.DamageType.Poison, allowCritical: false);
+    }
+
+    public void TakeRawDamage(float amount, DamagePopup.DamageType damageType)
+    {
+        InternalTakeDamage(amount, damageType, allowCritical: false);
+    }
 
     private void InternalTakeDamage(float amount, DamagePopup.DamageType damageType, bool allowCritical)
     {

@@ -570,7 +570,17 @@ public class UpgradeSystem : MonoBehaviour
                     TryCopyMissingObjectFields(opt.SourceWeapon, opt.Weapon);
                 }
 
-                combat?.ApplyEvolution(opt.Weapon, opt.SourceWeapon);
+                if (opt.Weapon != null)
+                {
+                    var ownerGO = combat != null ? combat.gameObject : GameObject.FindGameObjectWithTag("Player");
+                    var mods = ownerGO != null ? ownerGO.GetComponent<HeroModifierSystem>() : null;
+                    var beh = opt.Weapon.CreateBehavior(ownerGO);
+                    if (beh != null)
+                    {
+                        try { beh.Initialize(ownerGO, opt.Weapon, mods, combat); } catch { }
+                        try { beh.OnUpgrade(1); } catch { }
+                    }
+                }
 
                 if (opt.SourceWeapon != null)
                 {

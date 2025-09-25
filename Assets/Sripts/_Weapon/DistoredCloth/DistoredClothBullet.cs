@@ -70,9 +70,14 @@ public class DistoredClothBullet : MonoBehaviour
             if (hitEnemies.Contains(es)) return;
             hitEnemies.Add(es);
 
+            // Наносим основной урон (белый цвет)
             DamageHelper.ApplyDamage(owner, es, damage, raw: false, popupType: DamagePopup.DamageType.Normal);
 
-            if (poisonEnabled) es.ApplyPoison(poisonTick, poisonInterval, poisonDuration);
+            if (poisonEnabled) 
+            {
+                // Применяем яд (зеленый цвет)
+                es.ApplyPoison(poisonTick, poisonInterval, poisonDuration);
+            }
 
             penetrationCount--;
             if (penetrationCount <= 0) Destroy(gameObject);
@@ -85,15 +90,20 @@ public class DistoredClothBullet : MonoBehaviour
                 if (hitEnemies.Contains(maybeEs)) return;
                 hitEnemies.Add(maybeEs);
                 DamageHelper.ApplyDamage(owner, maybeEs, damage, raw: false, popupType: DamagePopup.DamageType.Normal);
-                if (poisonEnabled) maybeEs.ApplyPoison(poisonTick, poisonInterval, poisonDuration);
+                if (poisonEnabled) 
+                {
+                    maybeEs.ApplyPoison(poisonTick, poisonInterval, poisonDuration);
+                }
             }
             else
             {
                 DamageHelper.ApplyDamage(owner, stats, damage, raw: false, popupType: DamagePopup.DamageType.Normal);
                 if (poisonEnabled)
                 {
-                    var ps = stats.GetComponent<EnemyStatus>();
-                    ps?.ApplyPoison(poisonTick, poisonInterval, poisonDuration);
+                    // Для EnemyStats без EnemyStatus создаем временный статус
+                    var tempStatus = stats.gameObject.AddComponent<EnemyStatus>();
+                    tempStatus.ApplyPoison(poisonTick, poisonInterval, poisonDuration);
+                    Destroy(tempStatus, poisonDuration + 0.1f);
                 }
             }
 

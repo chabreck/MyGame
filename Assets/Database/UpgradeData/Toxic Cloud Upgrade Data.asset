@@ -9,28 +9,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78a8d45aca7f46e29b783e11ff95dde9, type: 3}
-  m_Name: Blood Capacitor Upgrade Data
+  m_Script: {fileID: 11500000, guid: 529cf9d28c3d4fb18642c9a8a564c47e, type: 3}
+  m_Name: Toxic Cloud Upgrade Data
   m_EditorClassIdentifier: 
   upgradeNameLocalized:
     m_TableReference:
       m_TableCollectionName: GUID:53060c94993459343a52cec5f203ab05
     m_TableEntryReference:
-      m_KeyId: 8309616537096192
+      m_KeyId: 7208289903955968
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  upgradeName: BloodCapacitor
-  upgradeIcon: {fileID: -2018751389, guid: 92d9be71046685545b31b89bb6e3322d, type: 3}
+  upgradeName: ToxicCloud
+  upgradeIcon: {fileID: -522985709, guid: 92d9be71046685545b31b89bb6e3322d, type: 3}
   tags:
-  - BloodCapacitor
+  - ToxicCloud
   levelEffects:
   - descriptionLocalized:
       m_TableReference:
         m_TableCollectionName: GUID:53060c94993459343a52cec5f203ab05
       m_TableEntryReference:
-        m_KeyId: 8309669154639872
+        m_KeyId: 7208320270716928
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
@@ -40,7 +40,7 @@ MonoBehaviour:
       m_TableReference:
         m_TableCollectionName: GUID:53060c94993459343a52cec5f203ab05
       m_TableEntryReference:
-        m_KeyId: 8309690520424448
+        m_KeyId: 7208335105970176
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
@@ -50,7 +50,7 @@ MonoBehaviour:
       m_TableReference:
         m_TableCollectionName: GUID:53060c94993459343a52cec5f203ab05
       m_TableEntryReference:
-        m_KeyId: 8309703128502272
+        m_KeyId: 7208345985994752
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
@@ -60,7 +60,7 @@ MonoBehaviour:
       m_TableReference:
         m_TableCollectionName: GUID:53060c94993459343a52cec5f203ab05
       m_TableEntryReference:
-        m_KeyId: 8309714432151552
+        m_KeyId: 7208357310615552
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
@@ -70,20 +70,22 @@ MonoBehaviour:
       m_TableReference:
         m_TableCollectionName: GUID:53060c94993459343a52cec5f203ab05
       m_TableEntryReference:
-        m_KeyId: 8309731737849856
+        m_KeyId: 7208369738338304
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
     description: 
-  moveSpeedBonus: 0.1
-  baseDuration: 2
+  cloudChance: 0.05
+  cloudDuration: 3
+  cloudRadius: 2
+  cloudDPS: 4
+  slowFactor: 0.4
   level2_extraDuration: 2
-  damageBonus: 0.1
-  experienceRadiusMultiplier: 2
-  autoAttractInterval: 45
-  autoAttractPullDuration: 0.8
-  autoAttractRange: 20
+  level4_dpsMultiplier: 1.2
+  level5_convergeCount: 3
+  level5_convergeDamage: 30
+  cloudPrefab: {fileID: 3331113060761760566, guid: d60eef144b9399f41aaf91e9fa98f010, type: 3}
   references:
     version: 2
     RefIds: []

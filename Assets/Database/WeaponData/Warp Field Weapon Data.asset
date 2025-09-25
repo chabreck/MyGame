@@ -22,7 +22,7 @@ MonoBehaviour:
     m_WaitForCompletion: 0
     m_LocalVariables: []
   weaponName: WarpField
-  weaponIcon: {fileID: 21300000, guid: 82f8b88bbcc8db94d97159ae48d789c8, type: 3}
+  weaponIcon: {fileID: 380862470, guid: fc5a9cafbf201534484ed19c58c7e86a, type: 3}
   tags:
   - WarpField
   levelEffects:

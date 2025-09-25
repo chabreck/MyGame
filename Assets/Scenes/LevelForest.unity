@@ -11744,6 +11744,12 @@ MonoBehaviour:
     - ToxicCloud
     resultWeapon: {fileID: 11400000, guid: 9f5a4ec4ad6137741baf90c0cfe0dd5c, type: 2}
     offerChance: 0.6
+  - requiredWeaponTags:
+    - DistoredCloth
+    requiredUpgradeTags:
+    - BloodCapacitor
+    resultWeapon: {fileID: 11400000, guid: 3ade637e651121144ae243cfb9cd8fd8, type: 2}
+    offerChance: 1
 --- !u!222 &1208277602
 CanvasRenderer:
   m_ObjectHideFlags: 0

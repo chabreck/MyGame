@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
-public class BlackDustBullet : MonoBehaviour
+public class ToxicCloudBullet : MonoBehaviour
 {
     private GameObject owner;
     private float lifetime = 3f;
@@ -55,14 +55,14 @@ public class BlackDustBullet : MonoBehaviour
         {
             if (inside.Count > 0 && dps > 0f)
             {
-                float per = dps; // per second
-                // make a snapshot to avoid collection-modified exceptions
+                float per = dps;
                 var snapshot = new EnemyStatus[inside.Count];
                 inside.CopyTo(snapshot);
                 foreach (var es in snapshot)
                 {
                     if (es == null) continue;
-                    DamageHelper.ApplyDamage(owner, es, per, raw: true, popupType: DamagePopup.DamageType.Poison);
+                    DamageHelper.ApplyDamage(owner, es, per, raw: false, popupType: DamagePopup.DamageType.Poison);
+                    if (NervousToxinBehavior.Instance != null) NervousToxinBehavior.Instance.OnEnemyPoisonTick(es.gameObject, per);
                 }
             }
             elapsed += 1f;

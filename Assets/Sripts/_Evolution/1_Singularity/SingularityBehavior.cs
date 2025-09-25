@@ -72,7 +72,7 @@ public class SingularityBehavior : MonoBehaviour, IWeaponBehavior
         {
             if (fieldInstance != null)
             {
-                var clouds = Object.FindObjectsOfType<BlackDustBullet>();
+                var clouds = Object.FindObjectsOfType<ToxicCloudBullet>();
                 if (clouds != null && clouds.Length > 0)
                 {
                     foreach (var c in clouds)

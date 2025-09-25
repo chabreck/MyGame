@@ -3,20 +3,20 @@ using System.Collections;
 using System.Collections.Generic;
 
 [DisallowMultipleComponent]
-public class BlackDustUpgrade : MonoBehaviour, IUpgradeBehavior
+public class ToxicCloudUpgrade : MonoBehaviour, IUpgradeBehavior
 {
-    private BlackDustData data;
+    private ToxicCloudData data;
     private HeroCombat combat;
     private int currentLevel = 0;
-    private readonly List<BlackDustBullet> registeredClouds = new List<BlackDustBullet>();
+    private readonly List<ToxicCloudBullet> registeredClouds = new List<ToxicCloudBullet>();
     private GameObject owner;
 
-    public void Configure(BlackDustData d) { data = d; Debug.Log($"BlackDustUpgrade: Configured with data {(d != null ? d.name : "null")}, cloudChance: {(d != null ? d.cloudChance.ToString() : "null")}"); }
+    public void Configure(ToxicCloudData d) { data = d; Debug.Log($"BlackDustUpgrade: Configured with data {(d != null ? d.name : "null")}, cloudChance: {(d != null ? d.cloudChance.ToString() : "null")}"); }
 
     public void Initialize(GameObject ownerGO, UpgradeBase d)
     {
         owner = ownerGO;
-        if (d is BlackDustData bd) Configure(bd);
+        if (d is ToxicCloudData bd) Configure(bd);
         combat = owner?.GetComponent<HeroCombat>() ?? FindObjectOfType<HeroCombat>();
         DamageHelper.OnDamageApplied -= OnDamageApplied;
         DamageHelper.OnDamageApplied += OnDamageApplied;
@@ -81,8 +81,8 @@ public class BlackDustUpgrade : MonoBehaviour, IUpgradeBehavior
             sr.sprite = sprite;
         }
 
-        var cloud = go.GetComponent<BlackDustBullet>();
-        if (cloud == null) cloud = go.AddComponent<BlackDustBullet>();
+        var cloud = go.GetComponent<ToxicCloudBullet>();
+        if (cloud == null) cloud = go.AddComponent<ToxicCloudBullet>();
 
         float dur = data.cloudDuration + (currentLevel >= 2 ? data.level2_extraDuration : 0f);
         float dps = data.cloudDPS * (currentLevel >= 4 ? data.level4_dpsMultiplier : 1f);
@@ -95,7 +95,7 @@ public class BlackDustUpgrade : MonoBehaviour, IUpgradeBehavior
         if (notifyController) RegisterCloud(cloud);
     }
 
-    private void RegisterCloud(BlackDustBullet c)
+    private void RegisterCloud(ToxicCloudBullet c)
     {
         registeredClouds.Add(c);
         registeredClouds.RemoveAll(x => x == null);
