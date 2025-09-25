@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: UPGRADE Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: UPGRADE
+  m_TableCollectionNameGuidString: 53060c94993459343a52cec5f203ab05
+  m_Entries:
+  - m_Id: 7208289903955968
+    m_Key: ToxicCloud_name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7208320270716928
+    m_Key: ToxicCloud_lvl1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7208335105970176
+    m_Key: ToxicCloud_lvl2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7208345985994752
+    m_Key: ToxicCloud_lvl3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7208357310615552
+    m_Key: ToxicCloud_lvl4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7208369738338304
+    m_Key: ToxicCloud_lvl5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8309616537096192
+    m_Key: BloodCapacitor_name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8309669154639872
+    m_Key: BloodCapacitor_lvl1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8309690520424448
+    m_Key: BloodCapacitor_lvl2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8309703128502272
+    m_Key: BloodCapacitor_lvl3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8309714432151552
+    m_Key: BloodCapacitor_lvl4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8309731737849856
+    m_Key: BloodCapacitor_lvl5
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 4259666683729805315
+  references:
+    version: 2
+    RefIds:
+    - rid: 4259666683729805315
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1755099120173

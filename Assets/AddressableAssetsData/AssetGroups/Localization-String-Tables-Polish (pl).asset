@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-String-Tables-Polish (pl)
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-String-Tables-Polish (pl)
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 0bd58e6a45165f340bdf87cfe7fb063a
+  m_SerializeEntries:
+  - m_GUID: 60e60753e22b5c3429cc08cf46d6108b
+    m_Address: UI_pl
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pl
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9c8d792887a876746974bce571dc54be
+    m_Address: WEAPON_pl
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pl
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ce0efd4e8b84e8e47b42ac8874389c8f
+    m_Address: UPGRADE_pl
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pl
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e64843ca3ead0a141b1122ce69e6a4aa
+    m_Address: EVOLUTION_pl
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pl
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: d64b5c41cb2a0924094401d7a7d02aab, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 8f96c7adb13330f4f9a2dd5cf3b9c9f0, type: 2}
+    - {fileID: 11400000, guid: 9a74aa2c5bf2a7b49a9028c29a5621dd, type: 2}

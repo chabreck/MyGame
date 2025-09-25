@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: UI_tr
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: tr
+  m_SharedData: {fileID: 11400000, guid: 753fa772f03ea1f4abd355194a8d47f4, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 10215116038483968
+    m_Localized: Geri
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16397765909794816
+    m_Localized: Seviye
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15328773841473536
+    m_Localized: Devam
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10215099823304704
+    m_Localized: Tam ekran
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10215114645975040
+    m_Localized: Dil
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15330457045028864
+    m_Localized: "Ana men\xFC"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10215174775517184
+    m_Localized: Oyna
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10215177082384384
+    m_Localized: Ayarlar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10215178768494592
+    m_Localized: "Y\xFCkselt"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 250119180636160
+    m_Localized: "M\xFCzik"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15329100644864000
+    m_Localized: "Hay\u0131r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10214938141274112
+    m_Localized: "\xC7\u0131k\u0131\u015F"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15328981056868352
+    m_Localized: "Ayr\u0131lmak istedi\u011Finizden emin misiniz?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10215112326524928
+    m_Localized: "\xC7\xF6z\xFCn\xFCrl\xFCk"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10215095331205120
+    m_Localized: Ses
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15329095477481472
+    m_Localized: Evet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29227850824011776
+    m_Localized: Seviye Atla
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29235381231276032
+    m_Localized: Evrim
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29239881992097792
+    m_Localized: "Se\xE7"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

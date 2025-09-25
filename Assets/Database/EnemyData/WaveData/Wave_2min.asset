@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f64f4b855bd44f6da6638435a7b3cccf, type: 3}
+  m_Name: Wave_2min
+  m_EditorClassIdentifier: 
+  duration: 30
+  difficultyMultiplier: 1
+  entries:
+  - enemyPrefab: {fileID: 2027268394459525515, guid: 09ab0de9bccf2e947810912f2b1bb44c, type: 3}
+    count: 200
+    spawnInterval: 0.5
+    pattern: 0
+    radius: 10
+    spread: 10
+  - enemyPrefab: {fileID: 2027268394459525515, guid: c43c3989c36dfc943954575740e9d0a6, type: 3}
+    count: 200
+    spawnInterval: 0.5
+    pattern: 0
+    radius: 10
+    spread: 5
+  - enemyPrefab: {fileID: 2027268394459525515, guid: 61a4f6fd3dfbe4745923ecd1891739a2, type: 3}
+    count: 200
+    spawnInterval: 0.5
+    pattern: 0
+    radius: 10
+    spread: 5

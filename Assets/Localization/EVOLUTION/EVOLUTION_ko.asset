@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: EVOLUTION_ko
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: ko
+  m_SharedData: {fileID: 11400000, guid: 6fb24187bc8e6fa49abe8eafa50d7650, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 14770884608
+    m_Localized: "\uD2B9\uC774\uC810"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65354190848
+    m_Localized: "\uD544\uB4DC \uC548\uC758 \uAD6C\uB984\uC740 \uD761\uC218\uB418\uC5B4
+      \uBC18\uACBD\uACFC \uAE30\uBCF8 \uD53C\uD574\uAC00 \uC601\uAD6C\uC801\uC73C\uB85C
+      \uC18C\uD3ED \uC99D\uAC00\uD569\uB2C8\uB2E4."
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 177c7da3e93e4c708676f66aa0cd2310, type: 3}
+  m_Name: Warp Field Weapon Data
+  m_EditorClassIdentifier: 
+  weaponNameLocalized:
+    m_TableReference:
+      m_TableCollectionName: GUID:fd67dffcaef6dd048a3e8092115a3485
+    m_TableEntryReference:
+      m_KeyId: 3455455580508160
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  weaponName: WarpField
+  weaponIcon: {fileID: 21300000, guid: 82f8b88bbcc8db94d97159ae48d789c8, type: 3}
+  tags:
+  - WarpField
+  levelEffects:
+  - descriptionLocalized:
+      m_TableReference:
+        m_TableCollectionName: GUID:fd67dffcaef6dd048a3e8092115a3485
+      m_TableEntryReference:
+        m_KeyId: 3455459774812160
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    description: 
+  - descriptionLocalized:
+      m_TableReference:
+        m_TableCollectionName: GUID:fd67dffcaef6dd048a3e8092115a3485
+      m_TableEntryReference:
+        m_KeyId: 3455462043930624
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    description: 
+  - descriptionLocalized:
+      m_TableReference:
+        m_TableCollectionName: GUID:fd67dffcaef6dd048a3e8092115a3485
+      m_TableEntryReference:
+        m_KeyId: 3455463922978816
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    description: 
+  - descriptionLocalized:
+      m_TableReference:
+        m_TableCollectionName: GUID:fd67dffcaef6dd048a3e8092115a3485
+      m_TableEntryReference:
+        m_KeyId: 3455465755889664
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    description: 
+  - descriptionLocalized:
+      m_TableReference:
+        m_TableCollectionName: GUID:fd67dffcaef6dd048a3e8092115a3485
+      m_TableEntryReference:
+        m_KeyId: 3455663009812480
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    description: 
+  baseRadius: 1.5
+  areaPrefab: {fileID: 3858097121593784271, guid: efae54282c3083a4083193972dfaf734, type: 3}
+  slowFactor: 0.5
+  damagePerTick: 20
+  tickInterval: 1
+  firstContactDamage: 60
+  references:
+    version: 2
+    RefIds: []

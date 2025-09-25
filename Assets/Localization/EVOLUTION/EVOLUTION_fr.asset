@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: EVOLUTION_fr
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: fr
+  m_SharedData: {fileID: 11400000, guid: 6fb24187bc8e6fa49abe8eafa50d7650, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 14770884608
+    m_Localized: "Singularit\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65354190848
+    m_Localized: "Les nuages \xE0 l\u2019int\xE9rieur du champ sont absorb\xE9s,
+      augmentant d\xE9finitivement son rayon et ses d\xE9g\xE2ts de base d\u2019une
+      petite valeur."
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

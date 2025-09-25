@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: WEAPON Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: WEAPON
+  m_TableCollectionNameGuidString: fd67dffcaef6dd048a3e8092115a3485
+  m_Entries:
+  - m_Id: 3455455580508160
+    m_Key: WarpField_name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3455459774812160
+    m_Key: WarpField_lvl1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3455462043930624
+    m_Key: WarpField_lvl2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3455463922978816
+    m_Key: WarpField_lvl3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3455465755889664
+    m_Key: WarpField_lvl4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3455663009812480
+    m_Key: WarpField_lvl5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4627965533605888
+    m_Key: DistortedCloth_name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4627968012439552
+    m_Key: DistortedCloth_lvl1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4627970889732096
+    m_Key: DistortedCloth_lvl2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4627972873637888
+    m_Key: DistortedCloth_lvl3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4627974501027840
+    m_Key: DistortedCloth_lvl4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4628102754455552
+    m_Key: DistortedCloth_lvl5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6080511666147328
+    m_Key: OrbitPetal_name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6080572319977472
+    m_Key: OrbitalPetal_lvl1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6080599490678784
+    m_Key: OrbitalPetal_lvl2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6080611264090112
+    m_Key: OrbitalPetal_lvl3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6080619036135424
+    m_Key: OrbitalPetal_lvl4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6080628745949184
+    m_Key: OrbitalPetal_lvl5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6475468679794688
+    m_Key: Boomerang_name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6475496156680192
+    m_Key: Boomerang_lvl1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6475512850010112
+    m_Key: Boomerang_lvl2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6475519913218048
+    m_Key: Boomerang_lvl3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6475550686826496
+    m_Key: Boomerang_lvl4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6475560040124416
+    m_Key: Boomerang_lvl5
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 4259666683729805314
+  references:
+    version: 2
+    RefIds:
+    - rid: 4259666683729805314
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1755099105068

@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be51871efa6c3e4eae1703925c8f5ac, type: 3}
+  m_Name: EVOLUTION
+  m_EditorClassIdentifier: 
+  m_SharedTableData: {fileID: 11400000, guid: 6fb24187bc8e6fa49abe8eafa50d7650, type: 2}
+  m_Tables:
+  - {fileID: 11400000, guid: 22c2bd14f7d1b674eb21ea947eb9023d, type: 2}
+  - {fileID: 11400000, guid: 54b55612ed768ec4cb0318e62c7db925, type: 2}
+  - {fileID: 11400000, guid: 02c84875f51121743974d2b24cd53f09, type: 2}
+  - {fileID: 11400000, guid: c0aeb458f1241e442ae87810222584f8, type: 2}
+  - {fileID: 11400000, guid: cc070e1711e5fd048b4a71fb11b8c0ee, type: 2}
+  - {fileID: 11400000, guid: cb7351d04cb0ae048901265b28b7232b, type: 2}
+  - {fileID: 11400000, guid: 25897660938362048931a1f50cd7e3ee, type: 2}
+  - {fileID: 11400000, guid: e64843ca3ead0a141b1122ce69e6a4aa, type: 2}
+  - {fileID: 11400000, guid: a47041babd2a99345a7ad45766030e4f, type: 2}
+  - {fileID: 11400000, guid: 37f23af08a2309646bc3c876db9edfa7, type: 2}
+  - {fileID: 11400000, guid: 670c67ba82b0a0e49887ddd08cc5c875, type: 2}
+  - {fileID: 11400000, guid: 818af58c07590024eb29660f68af888e, type: 2}
+  - {fileID: 11400000, guid: d08cadef41202844da4bbc7784af4d9e, type: 2}
+  m_Extensions: []
+  m_Group: String Table
+  references:
+    version: 2
+    RefIds: []

@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-String-Tables-Ukrainian (uk)
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-String-Tables-Ukrainian (uk)
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 32b8f4abfc7d0234b84abc150da9354f
+  m_SerializeEntries:
+  - m_GUID: 58694864a062a3e419bd29125d8780ee
+    m_Address: WEAPON_uk
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-uk
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5a6edbdadde079145bfd47de0663c8a9
+    m_Address: UPGRADE_uk
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-uk
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 818af58c07590024eb29660f68af888e
+    m_Address: EVOLUTION_uk
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-uk
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d98534a31c61bd44b80d2402ca8f26a5
+    m_Address: UI_uk
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-uk
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: d64b5c41cb2a0924094401d7a7d02aab, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 8aa5592b491d7954fba0bda510d92949, type: 2}
+    - {fileID: 11400000, guid: 67f08e1d5b37c6247b238bc9cf9dd9df, type: 2}

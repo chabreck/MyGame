@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: EVOLUTION_zh-Hans
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: zh-Hans
+  m_SharedData: {fileID: 11400000, guid: 6fb24187bc8e6fa49abe8eafa50d7650, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 14770884608
+    m_Localized: "\u5947\u70B9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65354190848
+    m_Localized: "\u573A\u5185\u7684\u4E91\u4F1A\u88AB\u5438\u6536\uFF0C\u6C38\u4E45\u6027\u5730\u4F7F\u5176\u534A\u5F84\u548C\u57FA\u7840\u4F24\u5BB3\u7565\u5FAE\u589E\u52A0\u3002"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

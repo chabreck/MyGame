@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ae19845db4d4d62992b3925c948507e, type: 3}
+  m_Name: Boomerang Weapon Data
+  m_EditorClassIdentifier: 
+  weaponNameLocalized:
+    m_TableReference:
+      m_TableCollectionName: GUID:fd67dffcaef6dd048a3e8092115a3485
+    m_TableEntryReference:
+      m_KeyId: 6475468679794688
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  weaponName: Boomerang
+  weaponIcon: {fileID: 21300000, guid: 1a3acb4b31b57694bb53b858f6d92c3e, type: 3}
+  tags:
+  - Boomerang
+  levelEffects:
+  - descriptionLocalized:
+      m_TableReference:
+        m_TableCollectionName: GUID:fd67dffcaef6dd048a3e8092115a3485
+      m_TableEntryReference:
+        m_KeyId: 6475496156680192
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    description: 
+  - descriptionLocalized:
+      m_TableReference:
+        m_TableCollectionName: GUID:fd67dffcaef6dd048a3e8092115a3485
+      m_TableEntryReference:
+        m_KeyId: 6475512850010112
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    description: 
+  - descriptionLocalized:
+      m_TableReference:
+        m_TableCollectionName: GUID:fd67dffcaef6dd048a3e8092115a3485
+      m_TableEntryReference:
+        m_KeyId: 6475519913218048
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    description: 
+  - descriptionLocalized:
+      m_TableReference:
+        m_TableCollectionName: GUID:fd67dffcaef6dd048a3e8092115a3485
+      m_TableEntryReference:
+        m_KeyId: 6475550686826496
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    description: 
+  - descriptionLocalized:
+      m_TableReference:
+        m_TableCollectionName: GUID:fd67dffcaef6dd048a3e8092115a3485
+      m_TableEntryReference:
+        m_KeyId: 6475560040124416
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    description: 
+  boomerangPrefab: {fileID: 1490336730567571768, guid: aaf2837279117c2489921f661f378c8c, type: 3}
+  spawnInterval: 1.2
+  baseDamage: 15
+  level2DamageMultiplier: 1.5
+  baseMaxDistance: 4
+  level3DistanceMultiplier: 1.5
+  projectileSpeed: 12
+  stunDuration: 1
+  level5SpawnOpposite: 1
+  references:
+    version: 2
+    RefIds: []

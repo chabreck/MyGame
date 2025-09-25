@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78a8d45aca7f46e29b783e11ff95dde9, type: 3}
+  m_Name: Blood Capacitor Upgrade Data
+  m_EditorClassIdentifier: 
+  upgradeNameLocalized:
+    m_TableReference:
+      m_TableCollectionName: GUID:53060c94993459343a52cec5f203ab05
+    m_TableEntryReference:
+      m_KeyId: 8309616537096192
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  upgradeName: Blood Capacitor
+  upgradeIcon: {fileID: -2018751389, guid: 92d9be71046685545b31b89bb6e3322d, type: 3}
+  tags:
+  - BloodCapacitor
+  levelEffects:
+  - descriptionLocalized:
+      m_TableReference:
+        m_TableCollectionName: GUID:53060c94993459343a52cec5f203ab05
+      m_TableEntryReference:
+        m_KeyId: 8309669154639872
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    description: 
+  - descriptionLocalized:
+      m_TableReference:
+        m_TableCollectionName: GUID:53060c94993459343a52cec5f203ab05
+      m_TableEntryReference:
+        m_KeyId: 8309690520424448
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    description: 
+  - descriptionLocalized:
+      m_TableReference:
+        m_TableCollectionName: GUID:53060c94993459343a52cec5f203ab05
+      m_TableEntryReference:
+        m_KeyId: 8309703128502272
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    description: 
+  - descriptionLocalized:
+      m_TableReference:
+        m_TableCollectionName: GUID:53060c94993459343a52cec5f203ab05
+      m_TableEntryReference:
+        m_KeyId: 8309714432151552
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    description: 
+  - descriptionLocalized:
+      m_TableReference:
+        m_TableCollectionName: GUID:53060c94993459343a52cec5f203ab05
+      m_TableEntryReference:
+        m_KeyId: 8309731737849856
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    description: 
+  moveSpeedBonus: 0.1
+  baseDuration: 2
+  level2_extraDuration: 2
+  damageBonus: 0.1
+  experienceRadiusMultiplier: 2
+  autoAttractInterval: 45
+  autoAttractPullDuration: 0.8
+  autoAttractRange: 20
+  references:
+    version: 2
+    RefIds: []

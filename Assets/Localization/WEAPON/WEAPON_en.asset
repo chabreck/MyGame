@@ -1,0 +1,120 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: WEAPON_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: fd67dffcaef6dd048a3e8092115a3485, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 3455459774812160
+    m_Localized: Small field with radius 1.5, deals damage to enemies inside the
+      area.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3455455580508160
+    m_Localized: Warp Field
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3455462043930624
+    m_Localized: Enemies inside are slowed by 50%.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3455463922978816
+    m_Localized: "Radius increased \xD72."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3455465755889664
+    m_Localized: "Damage inside the field increased by 1.5\xD7."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3455663009812480
+    m_Localized: Every 15 sec the field pulses, knocking enemies back.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4627968012439552
+    m_Localized: 3 spikes every 1.5 sec.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4627965533605888
+    m_Localized: Distored Cloth
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4627970889732096
+    m_Localized: +2 spikes and increased damage.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4627972873637888
+    m_Localized: Spikes attach to enemies and deal damage over time.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4627974501027840
+    m_Localized: On hit, spikes split into additional spikes.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4628102754455552
+    m_Localized: All spikes apply poison.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6080511666147328
+    m_Localized: Orbit Petal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6080572319977472
+    m_Localized: One petal spins around you, dealing damage on contact.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6080599490678784
+    m_Localized: +1 petal. Increased damage.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6080611264090112
+    m_Localized: Rotation speed increased.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6080619036135424
+    m_Localized: +3 petals.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6080628745949184
+    m_Localized: Petals cause an explosion on killing an enemy.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6475468679794688
+    m_Localized: Boomerang
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6475496156680192
+    m_Localized: Flies forward and returns.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6475512850010112
+    m_Localized: Damage increased.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6475519913218048
+    m_Localized: Range increased.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6475550686826496
+    m_Localized: On return, the boomerang stuns enemies along its path.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6475560040124416
+    m_Localized: +1 Boomerang (flies in the opposite direction).
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
