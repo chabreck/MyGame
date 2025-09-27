@@ -5,18 +5,18 @@ public class ProceduralWorldGenerator : MonoBehaviour
 {
     [Header("Tiles")]
     public GameObject dirtTilePrefab;
-    public List<GameObject> grassTilePrefabs; // overlay prefabs (may be transparent)
+    public List<GameObject> grassTilePrefabs;
     public GameObject[] treePrefabs;
-    public GameObject[] bushPrefabs; // добавлены кусты
-    public GameObject[] rockPrefabs; // добавлены камни
+    public GameObject[] bushPrefabs;
+    public GameObject[] rockPrefabs;
 
     [Header("Generation Settings")]
     public int chunkSize = 4;
     public int renderDistance = 4;
     [Range(0, 1)] public float grassProbability = 0.8f;
     [Range(0, 1)] public float treeProbability = 0.01f;
-    [Range(0, 1)] public float bushProbability = 0.05f; // шанс спавна кустов
-    [Range(0, 1)] public float rockProbability = 0.03f; // шанс спавна камней
+    [Range(0, 1)] public float bushProbability = 0.05f;
+    [Range(0, 1)] public float rockProbability = 0.03f;
 
     private Dictionary<Vector2Int, GameObject> loadedChunks = new Dictionary<Vector2Int, GameObject>();
     private Transform player;
@@ -82,13 +82,11 @@ public class ProceduralWorldGenerator : MonoBehaviour
             {
                 Vector3 spawnPos = new Vector3(x + 0.5f, y + 0.5f, 0f);
 
-                // Сначала проверяем, нужно ли создавать землю
                 bool shouldCreateDirt = true;
                 
-                // Проверяем, будет ли трава
                 if (grassTilePrefabs != null && grassTilePrefabs.Count > 0 && Random.value < grassProbability)
                 {
-                    shouldCreateDirt = false; // Не создаем землю, если есть трава
+                    shouldCreateDirt = false;
                     GameObject grassPrefab = grassTilePrefabs[Random.Range(0, grassTilePrefabs.Count)];
                     if (grassPrefab != null)
                     {
@@ -96,7 +94,6 @@ public class ProceduralWorldGenerator : MonoBehaviour
                     }
                 }
 
-                // Создаем землю только если нужно
                 if (shouldCreateDirt && dirtTilePrefab != null)
                 {
                     Instantiate(dirtTilePrefab, spawnPos, Quaternion.identity, chunkParent.transform);
@@ -106,10 +103,8 @@ public class ProceduralWorldGenerator : MonoBehaviour
                     Debug.LogWarning("dirtTilePrefab is not assigned!");
                 }
 
-                // Деревья (с проверкой расстояния от краев чанка)
                 if (treePrefabs != null && treePrefabs.Length > 0 && Random.value < treeProbability)
                 {
-                    // Деревья не у краев чанка
                     if (x > startX && x < startX + chunkSize - 1 && 
                         y > startY && y < startY + chunkSize - 1)
                     {
@@ -121,7 +116,6 @@ public class ProceduralWorldGenerator : MonoBehaviour
                     }
                 }
 
-                // Кусты
                 if (bushPrefabs != null && bushPrefabs.Length > 0 && Random.value < bushProbability)
                 {
                     GameObject bushPrefab = bushPrefabs[Random.Range(0, bushPrefabs.Length)];
@@ -131,7 +125,6 @@ public class ProceduralWorldGenerator : MonoBehaviour
                     }
                 }
 
-                // Камни
                 if (rockPrefabs != null && rockPrefabs.Length > 0 && Random.value < rockProbability)
                 {
                     GameObject rockPrefab = rockPrefabs[Random.Range(0, rockPrefabs.Length)];

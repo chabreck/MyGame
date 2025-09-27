@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 
 [DisallowMultipleComponent]
-public class NervousToxinBehavior : MonoBehaviour, IWeaponBehavior
+public class NerveToxinBehavior : MonoBehaviour, IWeaponBehavior
 {
-    public static NervousToxinBehavior Instance { get; private set; }
-    private NervousToxinEvolutionData data;
+    public static NerveToxinBehavior Instance { get; private set; }
+    private NerveToxinEvolutionData data;
     private GameObject owner;
     private int level = 1;
 
@@ -16,15 +16,15 @@ public class NervousToxinBehavior : MonoBehaviour, IWeaponBehavior
             return;
         }
         Instance = this;
-        Debug.Log("NervousToxinBehavior: Instance created");
+        Debug.Log("NerveToxinBehavior: Instance created");
     }
 
     public void Initialize(GameObject ownerGO, WeaponBase wb, HeroModifierSystem mods, HeroCombat combat)
     {
         owner = ownerGO;
-        data = wb as NervousToxinEvolutionData;
+        data = wb as NerveToxinEvolutionData;
         level = 1;
-        Debug.Log($"NervousToxinBehavior: Initialized with owner {ownerGO.name}, data: {(data != null ? data.name : "null")}");
+        Debug.Log($"NerveToxinBehavior: Initialized with owner {ownerGO.name}");
     }
 
     public void Activate() { }
@@ -32,20 +32,27 @@ public class NervousToxinBehavior : MonoBehaviour, IWeaponBehavior
     public void OnUpgrade(int lvl)
     {
         level = Mathf.Clamp(lvl, 1, data != null ? data.maxLevel : lvl);
-        Debug.Log($"NervousToxinBehavior: Upgraded to level {level}");
+        Debug.Log($"NerveToxinBehavior: Upgraded to level {level}");
     }
 
     public void OnEnemyPoisonTick(GameObject enemy, float tickDamage)
     {
         if (enemy == null) 
         {
-            Debug.LogWarning("NervousToxinBehavior: enemy is null");
+            Debug.LogWarning("NerveToxinBehavior: enemy is null");
             return;
         }
         
         if (owner == null)
         {
-            Debug.LogWarning("NervousToxinBehavior: owner is null");
+            Debug.LogWarning("NerveToxinBehavior: owner is null");
+            return;
+        }
+        
+        var enemyStatus = enemy.GetComponent<EnemyStatus>();
+        if (enemyStatus == null)
+        {
+            Debug.LogWarning($"NerveToxinBehavior: enemy {enemy.name} has no EnemyStatus");
             return;
         }
         
@@ -53,19 +60,19 @@ public class NervousToxinBehavior : MonoBehaviour, IWeaponBehavior
         if (ppt == null) 
         {
             ppt = enemy.AddComponent<PoisonPulseTracker>();
-            Debug.Log($"NervousToxinBehavior: Added PoisonPulseTracker to {enemy.name}");
+            Debug.Log($"NerveToxinBehavior: Added PoisonPulseTracker to {enemy.name}");
         }
         
         float basePulse = data != null ? data.pulseBaseDamage : 6f;
         float radius = data != null ? data.pulseRadius : 2.5f;
         float scale = data != null ? data.pulseScaleFromPoisonTick : 0.25f;
         float xpChance = data != null ? data.xpAttractChancePerPoisonTick : 0.06f;
-        float xpRadius = data != null ? data.xpAttractRadius : 10f;
+        float xpRadius = 1000f;
         
         ppt.Configure(owner, enemy, basePulse, radius, scale, xpChance, xpRadius);
         ppt.OnPoisonTick(tickDamage);
         
-        Debug.Log($"NervousToxinBehavior: Processed poison tick on {enemy.name}, damage: {tickDamage}");
+        Debug.Log($"NerveToxinBehavior: Processed poison tick on {enemy.name}, damage: {tickDamage}");
     }
 
     private void OnDestroy()
@@ -73,7 +80,7 @@ public class NervousToxinBehavior : MonoBehaviour, IWeaponBehavior
         if (Instance == this) 
         {
             Instance = null;
-            Debug.Log("NervousToxinBehavior: Instance destroyed");
+            Debug.Log("NerveToxinBehavior: Instance destroyed");
         }
     }
 }

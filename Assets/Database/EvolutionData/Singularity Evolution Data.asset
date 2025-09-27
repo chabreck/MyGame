@@ -42,7 +42,7 @@ MonoBehaviour:
   firstContactBonusDamage: 25
   slowFactor: 0.5
   absorbRadiusPerCloud: 0.02
-  absorbDamagePerCloud: 1.5
+  absorbDamagePerCloud: 0.02
   absorbCheckInterval: 0.5
   tickInterval: 1
   references:

@@ -66,11 +66,11 @@ public class OrbitalPetalBullet : MonoBehaviour
         {
             if (lastHitTime.TryGetValue(key, out var t) && now - t < perEnemyCooldown) return;
             lastHitTime[key] = now;
-            DamageHelper.ApplyDamage(owner, key, damagePerHit, raw: false, popupType: DamagePopup.DamageType.Normal);
+            DamageHelper.ApplyDamage(owner, key, damagePerHit, raw: false, popupType: DamagePopup.DamageType.Normal, DamageHelper.DamageSourceType.Weapon);
         }
         else
         {
-            DamageHelper.ApplyDamage(owner, stats, damagePerHit, raw: false, popupType: DamagePopup.DamageType.Normal);
+            DamageHelper.ApplyDamage(owner, stats, damagePerHit, raw: false, popupType: DamagePopup.DamageType.Normal, DamageHelper.DamageSourceType.Weapon);
         }
 
         if (!continuous)

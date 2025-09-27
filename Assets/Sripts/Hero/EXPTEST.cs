@@ -3,11 +3,11 @@ using UnityEngine;
 public class ExperienceTester : MonoBehaviour
 {
     [SerializeField] private HeroExperience heroExperience;
-    [SerializeField] private int expAmount = 100; // сколько опыта добавлять за нажатие
+    [SerializeField] private int expAmount = 100;
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.X)) // меняй кнопку если нужно
+        if (Input.GetKeyDown(KeyCode.X))
         {
             if (heroExperience != null)
             {

@@ -43,8 +43,6 @@ public class DigitalPetalWeapon : WeaponBase
     [Tooltip("Сколько секунд лепесток остаётся 'исчезшим' после попадания (если не piercing).")]
     public float petalCooldown = 0.6f;
 
-    // level 5 => piercing (handled in behavior)
-
     public override IWeaponBehavior CreateBehavior(GameObject owner)
     {
         return owner.AddComponent<OrbitalPetalBehavior>();

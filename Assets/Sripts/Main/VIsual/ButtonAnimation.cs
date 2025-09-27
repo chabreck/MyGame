@@ -20,20 +20,19 @@ public class ButtonAnimation : MonoBehaviour,
 
     private Vector3 originalScale;
     private Selectable selectable;
-    private bool isToggle; // Добавляем флаг для определения Toggle
+    private bool isToggle;
 
     void Start()
     {
         originalScale = transform.localScale;
         selectable = GetComponent<Selectable>();
         
-        // Проверяем, является ли этот компонент Toggle
         isToggle = GetComponent<Toggle>() != null;
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (!selectable.interactable || isToggle) return; // Не применяем анимацию к Toggle
+        if (!selectable.interactable || isToggle) return;
 
         LeanTween.scale(gameObject, originalScale * hoverScale, animSpeed)
             .setEase(LeanTweenType.easeOutBack)
@@ -45,7 +44,7 @@ public class ButtonAnimation : MonoBehaviour,
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        if (isToggle) return; // Не применяем анимацию к Toggle
+        if (isToggle) return;
 
         LeanTween.scale(gameObject, originalScale, animSpeed)
             .setEase(LeanTweenType.easeOutQuad)
@@ -54,7 +53,7 @@ public class ButtonAnimation : MonoBehaviour,
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        if (!selectable.interactable || isToggle) return; // Не применяем анимацию к Toggle
+        if (!selectable.interactable || isToggle) return;
 
         LeanTween.scale(gameObject, originalScale * clickScale, animSpeed * 0.5f)
             .setEase(LeanTweenType.easeInOutCubic)
@@ -66,7 +65,7 @@ public class ButtonAnimation : MonoBehaviour,
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        if (isToggle) return; // Не применяем анимацию к Toggle
+        if (isToggle) return;
 
         LeanTween.scale(gameObject, originalScale, animSpeed * 0.5f)
             .setEase(LeanTweenType.easeOutQuad)

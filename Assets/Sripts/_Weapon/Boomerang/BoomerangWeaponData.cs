@@ -10,21 +10,21 @@
 public class BoomerangWeaponData : WeaponBase
 {
     [Header("Prefab")]
-    public GameObject boomerangPrefab; // префаб с Collider2D (isTrigger) и, опционально, Sprite
+    public GameObject boomerangPrefab;
 
     [Header("Spawn")]
     [Tooltip("Время между бросками")]
-    public float spawnInterval = 1.2f; // 0.833 throws/sec
+    public float spawnInterval = 1.2f;
 
     [Header("Damage / Range / Speed")]
     [Tooltip("Урон за одно попадание (ур.1)")]
-    public float baseDamage = 15f;            // урон за одно попадание (2 попадания/бросок => ~25 DPS)
+    public float baseDamage = 15f;
     [Tooltip("Множитель урона на ур.2")]
-    public float level2DamageMultiplier = 1.5f; // ур.2 увеличивает урон
+    public float level2DamageMultiplier = 1.5f;
     [Tooltip("Базовая дистанция полета туда (Unity units)")]
-    public float baseMaxDistance = 4f;       // ур.1
+    public float baseMaxDistance = 4f;
     [Tooltip("Множитель дистанции на ур.3")]
-    public float level3DistanceMultiplier = 1.5f; // ур.3: дальность ×1.5
+    public float level3DistanceMultiplier = 1.5f;
     [Tooltip("Скорость полёта")]
     public float projectileSpeed = 12f;
 

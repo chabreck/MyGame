@@ -24,7 +24,6 @@ public class HeroTrail : MonoBehaviour
             }
         }
 
-        // переносим на offset
         trailParticles.transform.localPosition = particleOffset;
 
         emissionModule = trailParticles.emission;

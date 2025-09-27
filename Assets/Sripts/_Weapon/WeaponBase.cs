@@ -22,7 +22,6 @@ public abstract class WeaponBase : ScriptableObject
 
     public abstract IWeaponBehavior CreateBehavior(GameObject owner);
 
-    // === Getters ===
     public LocalizedString GetNameLocalized() => weaponNameLocalized;
     public string GetNameFallback() => string.IsNullOrEmpty(weaponName) ? name : weaponName;
 

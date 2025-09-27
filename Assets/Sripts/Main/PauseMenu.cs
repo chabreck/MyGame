@@ -217,7 +217,7 @@ public class PauseMenu : MonoBehaviour
             if (settingsController == null)
                 settingsController = SettingsPanelManager.Instance.GetController();
             settingsController?.InitializeUI();
-            settingsController?.ResetDropdowns(); // Сбрасываем Dropdown
+            settingsController?.ResetDropdowns();
         }
         else if (settingsSubPanel != null)
         {
@@ -225,7 +225,7 @@ public class PauseMenu : MonoBehaviour
             var inits = settingsSubPanel.GetComponentsInChildren<ISettingsUIInitializer>(true);
             foreach (var init in inits) init.InitializeUI();
             settingsController?.InitializeUI();
-            settingsController?.ResetDropdowns(); // Сбрасываем Dropdown
+            settingsController?.ResetDropdowns();
             if (pauseMenuUI != null) pauseMenuUI.SetActive(false);
         }
         
@@ -233,7 +233,7 @@ public class PauseMenu : MonoBehaviour
             settingsController = SettingsPanelManager.Instance.GetController();
 
         settingsController?.InitializeUI();
-        settingsController?.ResetDropdowns(); // Сбрасываем Dropdown
+        settingsController?.ResetDropdowns();
     }
 
     private void OnSettingsHiddenFromPause()

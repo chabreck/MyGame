@@ -27,6 +27,15 @@ MonoBehaviour:
       sich sein Radius und sein Grundschaden dauerhaft um einen kleinen Wert erh\xF6hen."
     m_Metadata:
       m_Items: []
+  - m_Id: 1000477578350592
+    m_Localized: Nervengift
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1000481588105216
+    m_Localized: "Vergiftete Gegner pulsieren und verursachen geringen Fl\xE4chenschaden.
+      Jeder Gift-Tick kann eine Erfahrungssph\xE4re anziehen."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

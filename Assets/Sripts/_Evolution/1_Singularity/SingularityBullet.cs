@@ -74,7 +74,7 @@ public class SingularityBullet : MonoBehaviour
             foreach (var es in snapshot)
             {
                 if (es == null) continue;
-                DamageHelper.ApplyDamage(owner, es, damagePerTick, raw: true, popupType: DamagePopup.DamageType.Normal);
+                DamageHelper.ApplyDamage(owner, es, damagePerTick, raw: true, popupType: DamagePopup.DamageType.Normal, DamageHelper.DamageSourceType.AreaEffect);
             }
         }
     }
@@ -88,7 +88,7 @@ public class SingularityBullet : MonoBehaviour
         {
             inside.Add(es);
             es.ApplySlow(slowFactor, Mathf.Max(0.5f, 2f));
-            DamageHelper.ApplyDamage(owner, es, firstContactDamage, raw: false, popupType: DamagePopup.DamageType.Normal);
+            DamageHelper.ApplyDamage(owner, es, firstContactDamage, raw: false, popupType: DamagePopup.DamageType.Normal, DamageHelper.DamageSourceType.AreaEffect);
         }
     }
 

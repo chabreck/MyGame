@@ -28,6 +28,15 @@ MonoBehaviour:
       petite valeur."
     m_Metadata:
       m_Items: []
+  - m_Id: 1000477578350592
+    m_Localized: Toxine nerveuse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1000481588105216
+    m_Localized: "Les ennemis empoisonn\xE9s pulsent, infligeant de petits d\xE9g\xE2ts
+      de zone. Chaque tic de poison peut attirer une sph\xE8re d\u2019exp\xE9rience."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

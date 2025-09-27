@@ -44,13 +44,12 @@ public class HeroHealth : MonoBehaviour, IDamageable
 
     private void Start()
     {
-        // Find HeroExperience to subscribe to level-up events and to initialize HP scaling to current level
         heroExp = FindObjectOfType<HeroExperience>();
         int lvl = heroExp != null ? heroExp.CurrentLevel : 1;
 
         ApplyLevelScaling(lvl, doHeal: false);
 
-        currentHealth = Mathf.Min(currentHealth, maxHealth); // clamp if needed
+        currentHealth = Mathf.Min(currentHealth, maxHealth);
         GameStatsUIController.Instance?.UpdateHealthUI((int)currentHealth, (int)maxHealth);
 
         if (heroExp != null)
@@ -65,14 +64,9 @@ public class HeroHealth : MonoBehaviour, IDamageable
 
     private void HandleLevelUp(int newLevel)
     {
-        // Increase max HP according to new level and heal on levelup
         ApplyLevelScaling(newLevel, doHeal: true);
     }
 
-    /// <summary>
-    /// Recalculates maxHealth based on base (originalMax) and level.
-    /// If doHeal == true, heals by fraction healPercentOnLevel of the NEW maxHealth.
-    /// </summary>
     public void ApplyLevelScaling(int level, bool doHeal)
     {
         level = Mathf.Max(1, level);
@@ -86,7 +80,6 @@ public class HeroHealth : MonoBehaviour, IDamageable
         }
         else
         {
-            // Ensure current health is not above new max
             currentHealth = Mathf.Min(currentHealth, maxHealth);
             GameStatsUIController.Instance?.UpdateHealthUI((int)currentHealth, (int)maxHealth);
         }

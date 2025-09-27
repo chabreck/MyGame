@@ -6,7 +6,7 @@ public class HeroModifierSystem : MonoBehaviour
     private class ModifierEntry
     {
         public float value;
-        public float endTime; // время, когда бафф заканчивается; float.MaxValue = бесконечный
+        public float endTime;
     }
 
     private Dictionary<StatType, List<ModifierEntry>> modifiers = new();
@@ -25,7 +25,6 @@ public class HeroModifierSystem : MonoBehaviour
         float sum = 0f;
         if (modifiers.TryGetValue(type, out var list))
         {
-            // убираем истёкшие баффы
             for (int i = list.Count - 1; i >= 0; i--)
             {
                 if (list[i].endTime <= Time.time)
@@ -36,7 +35,7 @@ public class HeroModifierSystem : MonoBehaviour
                 sum += m.value;
         }
 
-        return 1f + sum; // итоговый множитель
+        return 1f + sum;
     }
 }
 

@@ -27,6 +27,15 @@ MonoBehaviour:
       its radius and base damage by a small amount.
     m_Metadata:
       m_Items: []
+  - m_Id: 1000477578350592
+    m_Localized: Nerve Toxin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1000481588105216
+    m_Localized: Poisoned enemies pulse, dealing small area damage. Each poison tick
+      may attract an experience orb.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -6,18 +6,21 @@ using UnityEngine;
 public class ToxicCloudBullet : MonoBehaviour
 {
     private GameObject owner;
-    private float lifetime = 3f;
+    public float lifetime = 3f;
     private float radius = 2f;
     private float dps = 4f;
     private bool slowEnabled = false;
     private float slowFactor = 0.4f;
-    private bool notifyController = false;
+    public bool isPermanent = false;
+    private float creationTime;
 
     private CircleCollider2D trigger;
     private HashSet<EnemyStatus> inside = new HashSet<EnemyStatus>();
     private Coroutine tickRoutine;
+    
+    public float Age => Time.time - creationTime;
 
-    public void Initialize(GameObject owner, float duration, float radius, float dps, bool slowEnabled, float slowFactor, bool notifyController)
+    public void Initialize(GameObject owner, float duration, float radius, float dps, bool slowEnabled, float slowFactor, bool isPermanent)
     {
         this.owner = owner;
         this.lifetime = Mathf.Max(0.1f, duration);
@@ -25,7 +28,8 @@ public class ToxicCloudBullet : MonoBehaviour
         this.dps = Mathf.Max(0f, dps);
         this.slowEnabled = slowEnabled;
         this.slowFactor = Mathf.Clamp01(slowFactor);
-        this.notifyController = notifyController;
+        this.isPermanent = isPermanent;
+        this.creationTime = Time.time;
 
         trigger = GetComponent<CircleCollider2D>();
         if (trigger == null) trigger = gameObject.AddComponent<CircleCollider2D>();
@@ -44,7 +48,11 @@ public class ToxicCloudBullet : MonoBehaviour
         }
 
         tickRoutine = StartCoroutine(Tick());
-        Destroy(gameObject, lifetime);
+
+        if (!isPermanent)
+        {
+            Destroy(gameObject, lifetime);
+        }
     }
 
     private IEnumerator Tick()
@@ -61,8 +69,12 @@ public class ToxicCloudBullet : MonoBehaviour
                 foreach (var es in snapshot)
                 {
                     if (es == null) continue;
-                    DamageHelper.ApplyDamage(owner, es, per, raw: false, popupType: DamagePopup.DamageType.Poison);
-                    if (NervousToxinBehavior.Instance != null) NervousToxinBehavior.Instance.OnEnemyPoisonTick(es.gameObject, per);
+                    DamageHelper.ApplyDamage(owner, es, per, raw: false, 
+                        popupType: DamagePopup.DamageType.Poison, 
+                        sourceType: DamageHelper.DamageSourceType.AreaEffect);
+                
+                    if (NerveToxinBehavior.Instance != null) 
+                        NerveToxinBehavior.Instance.OnEnemyPoisonTick(es.gameObject, per);
                 }
             }
             elapsed += 1f;
@@ -89,6 +101,24 @@ public class ToxicCloudBullet : MonoBehaviour
     }
 
     public void SetPosition(Vector3 pos) => transform.position = pos;
-    public void ForceDestroy() => Destroy(gameObject);
-    private void OnDestroy() { if (tickRoutine != null) StopCoroutine(tickRoutine); inside.Clear(); }
+    
+    public void ForceDestroy()
+    {
+        if (tickRoutine != null) 
+        {
+            StopCoroutine(tickRoutine);
+            tickRoutine = null;
+        }
+        Destroy(gameObject);
+    }
+    
+    private void OnDestroy() 
+    { 
+        if (tickRoutine != null) 
+        {
+            StopCoroutine(tickRoutine);
+            tickRoutine = null;
+        }
+        inside.Clear(); 
+    }
 }

@@ -28,6 +28,15 @@ MonoBehaviour:
       art\u0131r\u0131r."
     m_Metadata:
       m_Items: []
+  - m_Id: 1000477578350592
+    m_Localized: Sinir Toksini
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1000481588105216
+    m_Localized: "Zehirlenen d\xFC\u015Fmanlar darbe yayarak k\xFC\xE7\xFCk alan
+      hasar\u0131 verir. Zehrin her tik\u2019i bir deneyim k\xFCresini \xE7ekebilir."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

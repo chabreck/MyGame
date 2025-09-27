@@ -12,6 +12,7 @@ TagManager:
   - resolutionDropdown
   - languageDropdown
   - FullScreenToggle
+  - XPOrb
   layers:
   - Default
   - TransparentFX

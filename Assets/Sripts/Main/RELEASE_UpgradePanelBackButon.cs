@@ -11,7 +11,6 @@ public class UpgradePanelBackButton : MonoBehaviour
 
     private void Start()
     {
-        // Получаем компонент Button с текущего объекта
         backButton = GetComponent<Button>();
         
         if (backButton == null)
@@ -20,10 +19,8 @@ public class UpgradePanelBackButton : MonoBehaviour
             return;
         }
 
-        // Если панели не назначены в инспекторе, пытаемся найти их автоматически
         if (upgradePanel == null)
         {
-            // Ищем UpgradePanel по имени или тегу
             upgradePanel = GameObject.Find("UpgradePanel");
             if (upgradePanel == null)
             {
@@ -33,7 +30,6 @@ public class UpgradePanelBackButton : MonoBehaviour
 
         if (mainPanel == null)
         {
-            // Ищем MainPanel по имени или тегу
             mainPanel = GameObject.Find("MainPanel");
             if (mainPanel == null)
             {
@@ -41,13 +37,11 @@ public class UpgradePanelBackButton : MonoBehaviour
             }
         }
 
-        // Добавляем обработчик нажатия
         backButton.onClick.AddListener(OnBackButtonClicked);
     }
 
     private void OnBackButtonClicked()
     {
-        // Закрываем панель улучшений и открываем главное меню
         if (upgradePanel != null)
         {
             upgradePanel.SetActive(false);
@@ -65,7 +59,6 @@ public class UpgradePanelBackButton : MonoBehaviour
 
     private void OnDestroy()
     {
-        // Убираем обработчик при уничтожении объекта
         if (backButton != null)
         {
             backButton.onClick.RemoveListener(OnBackButtonClicked);

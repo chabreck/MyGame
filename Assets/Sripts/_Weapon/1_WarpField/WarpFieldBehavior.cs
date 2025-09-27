@@ -185,7 +185,7 @@ public class WarpFieldBehavior : MonoBehaviour, IWeaponBehavior
         {
             float multiplier = (level >= 4) ? 1.5f : 1f;
             float firstDmg = d.firstContactDamage * multiplier;
-            DamageHelper.ApplyDamage(owner, es, firstDmg, raw: false, popupType: DamagePopup.DamageType.Normal);
+            DamageHelper.ApplyDamage(owner, es, firstDmg, raw: false, popupType: DamagePopup.DamageType.Normal, DamageHelper.DamageSourceType.AreaEffect);
         }
     }
 
@@ -228,7 +228,7 @@ public class WarpFieldBehavior : MonoBehaviour, IWeaponBehavior
             foreach (var es in snapshot)
             {
                 if (es == null) continue;
-                DamageHelper.ApplyDamage(owner, es, dmg, raw: true, popupType: DamagePopup.DamageType.Normal);
+                DamageHelper.ApplyDamage(owner, es, dmg, raw: true, popupType: DamagePopup.DamageType.Normal, DamageHelper.DamageSourceType.AreaEffect);
             }
         }
     }

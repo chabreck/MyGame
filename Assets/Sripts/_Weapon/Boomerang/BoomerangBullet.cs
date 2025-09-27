@@ -92,7 +92,7 @@ public class BoomerangBullet : MonoBehaviour
             if (!hitThisPass.Contains(es))
             {
                 hitThisPass.Add(es);
-                DamageHelper.ApplyDamage(owner, es, damage, raw: false, popupType: DamagePopup.DamageType.Normal);
+                DamageHelper.ApplyDamage(owner, es, damage, raw: false, popupType: DamagePopup.DamageType.Normal, DamageHelper.DamageSourceType.Weapon);
                 if (isReturning && stunOnReturn) es.ApplyStun(stunDuration);
             }
         }
@@ -104,13 +104,13 @@ public class BoomerangBullet : MonoBehaviour
                 if (!hitThisPass.Contains(maybeEs))
                 {
                     hitThisPass.Add(maybeEs);
-                    DamageHelper.ApplyDamage(owner, maybeEs, damage, raw: false, popupType: DamagePopup.DamageType.Normal);
+                    DamageHelper.ApplyDamage(owner, maybeEs, damage, raw: false, popupType: DamagePopup.DamageType.Normal, DamageHelper.DamageSourceType.Weapon);
                     if (isReturning && stunOnReturn) maybeEs.ApplyStun(stunDuration);
                 }
             }
             else
             {
-                DamageHelper.ApplyDamage(owner, stats, damage, raw: false, popupType: DamagePopup.DamageType.Normal);
+                DamageHelper.ApplyDamage(owner, stats, damage, raw: false, popupType: DamagePopup.DamageType.Normal, DamageHelper.DamageSourceType.Weapon);
                 if (isReturning && stunOnReturn)
                 {
                     var ps = stats.GetComponent<EnemyStatus>();

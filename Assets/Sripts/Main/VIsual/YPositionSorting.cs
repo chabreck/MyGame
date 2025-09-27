@@ -13,7 +13,7 @@ public class YPositionSorting : MonoBehaviour
     private void LateUpdate()
     {
         float bottomY = _sr.bounds.min.y;
-        int order = Mathf.RoundToInt(sortingOrderBase - bottomY * 100f); //+ order Offset
+        int order = Mathf.RoundToInt(sortingOrderBase - bottomY * 100f);
         _sr.sortingOrder = order;
     }
 }

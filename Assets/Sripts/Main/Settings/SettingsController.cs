@@ -80,12 +80,10 @@ public class SettingsController : MonoBehaviour, ISettingsUIInitializer
         
             fullscreenToggle.onValueChanged.RemoveAllListeners();
         
-            // Устанавливаем начальное значение
             bool isFullscreen = PlayerPrefs.GetInt(SettingsManager.PREF_FULLSCREEN, Screen.fullScreen ? 1 : 0) == 1;
             Debug.Log($"Setting initial fullscreen value: {isFullscreen}");
             fullscreenToggle.isOn = isFullscreen;
         
-            // Добавляем слушатель с проверкой на null
             fullscreenToggle.onValueChanged.AddListener(val => {
                 Debug.Log($"Fullscreen toggle value changed to: {val}");
                 if (!isInitializing && SettingsManager.Instance != null)

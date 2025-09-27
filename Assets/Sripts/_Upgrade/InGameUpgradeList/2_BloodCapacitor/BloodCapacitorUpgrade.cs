@@ -84,21 +84,19 @@ public class BloodCapacitorUpgrade : MonoBehaviour, IUpgradeBehavior
         if (data == null) return;
 
         float duration = data.baseDuration + (currentLevel >= 2 ? data.level2_extraDuration : 0f);
-
-        // ----- Move speed -----
+        
         float moveBonus = data.moveSpeedBonus;
         if (moveBonus != 0f && mods != null)
         {
             mods.AddModifier(StatType.MoveSpeed, moveBonus, duration);
             Debug.Log($"BloodCapacitorUpgrade: Applied move boost {moveBonus * 100f}% for {duration}s");
         }
-        else if (movement != null) // fallback на старый HeroMovement
+        else if (movement != null)
         {
             movement.AddSpeedBoost(moveBonus, duration);
             Debug.Log($"BloodCapacitorUpgrade: Applied move boost {moveBonus * 100f}% for {duration}s via HeroMovement");
         }
 
-        // ----- Damage buff -----
         if (currentLevel >= 3)
         {
             float dmg = data.damageBonus;
@@ -107,7 +105,7 @@ public class BloodCapacitorUpgrade : MonoBehaviour, IUpgradeBehavior
                 mods.AddModifier(StatType.Damage, dmg, duration);
                 Debug.Log($"BloodCapacitorUpgrade: Applied damage boost {dmg * 100f}% for {duration}s");
             }
-            else if (combat != null) // fallback на HeroCombat
+            else if (combat != null)
             {
                 combat.AddDamageBoost(dmg, duration);
                 Debug.Log($"BloodCapacitorUpgrade: Applied damage boost {dmg * 100f}% for {duration}s via HeroCombat");

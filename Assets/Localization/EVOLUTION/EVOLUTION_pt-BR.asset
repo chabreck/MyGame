@@ -27,6 +27,15 @@ MonoBehaviour:
       permanentemente seu raio e dano base em uma pequena quantidade."
     m_Metadata:
       m_Items: []
+  - m_Id: 1000477578350592
+    m_Localized: Toxina Nervosa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1000481588105216
+    m_Localized: "Inimigos envenenados emitem pulsos, causando pequeno dano em \xE1rea.
+      Cada tic de veneno pode atrair uma esfera de experi\xEAncia."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

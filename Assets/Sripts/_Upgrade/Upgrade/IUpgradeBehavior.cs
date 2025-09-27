@@ -7,7 +7,5 @@ public interface IUpgradeBehavior
 
     // Вызывается при применении уровня (включая первый раз)
     void OnUpgrade(int level);
-
-    // опционально: если нужен per-frame
     void Activate();
 }

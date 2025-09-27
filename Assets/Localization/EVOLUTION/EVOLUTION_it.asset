@@ -27,6 +27,15 @@ MonoBehaviour:
       il suo raggio e il danno base di una piccola quantit\xE0."
     m_Metadata:
       m_Items: []
+  - m_Id: 1000477578350592
+    m_Localized: Tossina nervosa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1000481588105216
+    m_Localized: "I nemici avvelenati pulsano, infliggendo piccoli danni ad area.
+      Ogni tic di veleno pu\xF2 attrarre una sfera di esperienza."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

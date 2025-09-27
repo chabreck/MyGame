@@ -21,8 +21,7 @@ public abstract class UpgradeBase : ScriptableObject
     }
 
     public abstract IUpgradeBehavior CreateBehavior(GameObject owner);
-    
-    // --- Getters ---
+
     public LocalizedString GetNameLocalized() => upgradeNameLocalized;
     public string GetNameFallback() => string.IsNullOrEmpty(upgradeName) ? name : upgradeName;
 

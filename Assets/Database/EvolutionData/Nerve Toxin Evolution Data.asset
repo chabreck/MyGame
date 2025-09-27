@@ -10,37 +10,38 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a959b25a68a47afab68839e12b76bae, type: 3}
-  m_Name: Nervous Toxin Evolution Data
+  m_Name: Nerve Toxin Evolution Data
   m_EditorClassIdentifier: 
   weaponNameLocalized:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:6fb24187bc8e6fa49abe8eafa50d7650
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 1000477578350592
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  weaponName: NervousToxin
+  weaponName: NerveToxin
   weaponIcon: {fileID: -1742636665, guid: 92d9be71046685545b31b89bb6e3322d, type: 3}
   tags:
-  - NervousToxin
+  - NerveToxin
   levelEffects:
   - descriptionLocalized:
       m_TableReference:
-        m_TableCollectionName: 
+        m_TableCollectionName: GUID:6fb24187bc8e6fa49abe8eafa50d7650
       m_TableEntryReference:
-        m_KeyId: 0
+        m_KeyId: 1000481588105216
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    description: asfassafffasa
-  pulseBaseDamage: 6
+    description: 
+  pulseBaseDamage: 10
   pulseRadius: 2.5
   pulseScaleFromPoisonTick: 0.25
-  xpAttractChancePerPoisonTick: 0.06
-  xpAttractRadius: 10
+  xpAttractChancePerPoisonTick: 0.5
+  xpAttractRadius: 100
+  pulseVisualPrefab: {fileID: 7581521481845088701, guid: 923d705d233cafa4198551167d7d51cc, type: 3}
   references:
     version: 2
     RefIds: []

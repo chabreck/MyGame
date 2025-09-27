@@ -22,7 +22,6 @@ public class HealthBarWorldFollow : MonoBehaviour
 
         cam = Camera.main;
 
-        // запоминаем мировое смещение (то место, где ты поставил полосу в редакторе)
         if (target != null)
             worldOffset = transform.position - target.position;
         else
@@ -33,7 +32,6 @@ public class HealthBarWorldFollow : MonoBehaviour
     {
         if (target == null) return;
 
-        // жёстко позиционируем полосу в мировых координатах так, как было выставлено в редакторе
         transform.position = target.position + worldOffset;
 
         if (faceCamera)
@@ -41,14 +39,12 @@ public class HealthBarWorldFollow : MonoBehaviour
             if (cam == null) cam = Camera.main;
             if (cam != null)
             {
-                // повернуть чтобы лицевая сторона смотрела на камеру
                 transform.LookAt(cam.transform);
-                transform.Rotate(0f, 180f, 0f); // тк LookAt смотрит лицом "в" камеру, переворачиваем
+                transform.Rotate(0f, 180f, 0f);
             }
         }
     }
 
-    // можно вызвать, если игрок создаётся позже
     public void SetTarget(Transform t)
     {
         target = t;

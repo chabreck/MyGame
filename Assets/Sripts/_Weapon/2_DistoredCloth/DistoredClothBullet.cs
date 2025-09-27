@@ -70,12 +70,10 @@ public class DistoredClothBullet : MonoBehaviour
             if (hitEnemies.Contains(es)) return;
             hitEnemies.Add(es);
 
-            // Наносим основной урон (белый цвет)
-            DamageHelper.ApplyDamage(owner, es, damage, raw: false, popupType: DamagePopup.DamageType.Normal);
+            DamageHelper.ApplyDamage(owner, es, damage, raw: false, popupType: DamagePopup.DamageType.Normal, DamageHelper.DamageSourceType.Weapon);
 
             if (poisonEnabled) 
             {
-                // Применяем яд (зеленый цвет)
                 es.ApplyPoison(poisonTick, poisonInterval, poisonDuration);
             }
 
@@ -89,7 +87,7 @@ public class DistoredClothBullet : MonoBehaviour
             {
                 if (hitEnemies.Contains(maybeEs)) return;
                 hitEnemies.Add(maybeEs);
-                DamageHelper.ApplyDamage(owner, maybeEs, damage, raw: false, popupType: DamagePopup.DamageType.Normal);
+                DamageHelper.ApplyDamage(owner, maybeEs, damage, raw: false, popupType: DamagePopup.DamageType.Normal, DamageHelper.DamageSourceType.Weapon);
                 if (poisonEnabled) 
                 {
                     maybeEs.ApplyPoison(poisonTick, poisonInterval, poisonDuration);
@@ -97,14 +95,7 @@ public class DistoredClothBullet : MonoBehaviour
             }
             else
             {
-                DamageHelper.ApplyDamage(owner, stats, damage, raw: false, popupType: DamagePopup.DamageType.Normal);
-                if (poisonEnabled)
-                {
-                    // Для EnemyStats без EnemyStatus создаем временный статус
-                    var tempStatus = stats.gameObject.AddComponent<EnemyStatus>();
-                    tempStatus.ApplyPoison(poisonTick, poisonInterval, poisonDuration);
-                    Destroy(tempStatus, poisonDuration + 0.1f);
-                }
+                DamageHelper.ApplyDamage(owner, stats, damage, raw: false, popupType: DamagePopup.DamageType.Normal, DamageHelper.DamageSourceType.Weapon);
             }
 
             penetrationCount--;

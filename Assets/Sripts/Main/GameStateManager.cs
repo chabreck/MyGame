@@ -46,7 +46,7 @@ public class GameStateManager : MonoBehaviour
         IsChoosingUpgrade = false;
         Time.timeScale = 1f;
         var hasMainMenu = FindObjectOfType<MainMenu>() != null;
-        Cursor.visible = hasMainMenu; // показываем если MainMenu есть
+        Cursor.visible = hasMainMenu;
         Cursor.lockState = hasMainMenu ? CursorLockMode.None : CursorLockMode.Confined;
 
     }
@@ -55,11 +55,7 @@ public class GameStateManager : MonoBehaviour
     {
         yield return null;
 
-        // Гарантируем, что панель настроек существует до того, как мы рассылаем состояние.
         SettingsPanelManager.EnsureInstanceExists();
-
-        // (опционально) Убедимся что SettingsManager/LocalizationManager загружены:
-        // (если у тебя есть аналогичные Ensure методы — вызови их здесь)
 
         var mainMenu = FindObjectOfType<MainMenu>();
         if (mainMenu != null)

@@ -28,6 +28,16 @@ MonoBehaviour:
       o niewielk\u0105 warto\u015B\u0107."
     m_Metadata:
       m_Items: []
+  - m_Id: 1000477578350592
+    m_Localized: Toksyna nerwowa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1000481588105216
+    m_Localized: "Zatruci wrogowie pulsuj\u0105, zadaj\u0105c niewielkie obra\u017Cenia
+      obszarowe. Ka\u017Cdy tik trucizny mo\u017Ce przyci\u0105gn\u0105\u0107 kul\u0119
+      do\u015Bwiadczenia."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

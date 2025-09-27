@@ -23,12 +23,10 @@ public class UpgradeButton : MonoBehaviour
     private UpgradeSystem upgradeSystem;
     private UpgradeSystem.UpgradeOption currentOption;
 
-    // кеш строк
     private string cachedLevelPrefix = "Level";
     private string cachedEvolutionText = "Evolution";
     private string cachedPickText = "Pick";
 
-    // подписчики на изменение локализации
     private LocalizedString.ChangeHandler levelPrefixHandler;
     private LocalizedString.ChangeHandler evolutionHandler;
     private LocalizedString.ChangeHandler pickHandler;
@@ -37,7 +35,6 @@ public class UpgradeButton : MonoBehaviour
 
     private void Awake()
     {
-        // инициализируем обработчики
         levelPrefixHandler = (s) => { cachedLevelPrefix = s; ApplyLevelText(); };
         evolutionHandler = (s) => { cachedEvolutionText = s; ApplyLevelText(); };
         pickHandler = (s) => { cachedPickText = s; ApplyPickText(); };
@@ -45,12 +42,10 @@ public class UpgradeButton : MonoBehaviour
         titleOptionHandler = (s) => { if (titleText != null) titleText.text = s ?? ""; };
         descriptionOptionHandler = (s) => { if (descriptionText != null) descriptionText.text = s ?? ""; };
 
-        // подписываемся
         TrySubscribeLabel(levelPrefixLocalized, levelPrefixHandler);
         TrySubscribeLabel(evolutionTextLocalized, evolutionHandler);
         TrySubscribeLabel(pickLocalized, pickHandler);
 
-        // сразу загружаем начальные значения
         TryRefreshLabel(levelPrefixLocalized, levelPrefixHandler);
         TryRefreshLabel(evolutionTextLocalized, evolutionHandler);
         TryRefreshLabel(pickLocalized, pickHandler);
@@ -78,7 +73,6 @@ public class UpgradeButton : MonoBehaviour
 
     public void Setup(UpgradeSystem.UpgradeOption option)
     {
-        // отписываем старую опцию (чтобы не было утечек)
         UnsubscribeOptionLocalized();
 
         currentOption = option;
@@ -93,7 +87,6 @@ public class UpgradeButton : MonoBehaviour
         pickButton.interactable = true;
         pickButton.navigation = new Navigation() { mode = Navigation.Mode.None };
 
-        // подписываемся на новую опцию (чтобы при смене языка всё обновлялось)
         SubscribeOptionLocalized(option);
 
         ApplyLevelText();
@@ -143,12 +136,10 @@ public class UpgradeButton : MonoBehaviour
         if (pickButton != null) pickButton.interactable = false;
         gameObject.SetActive(false);
 
-        // отписываемся от старой опции
         UnsubscribeOptionLocalized();
         currentOption = null;
     }
 
-    // универсальные методы подписки/отписки
     private void TrySubscribeLabel(LocalizedString ls, LocalizedString.ChangeHandler handler)
     {
         if (ls != null) ls.StringChanged += handler;
@@ -176,7 +167,6 @@ public class UpgradeButton : MonoBehaviour
         if (opt.titleLocalized != null) opt.titleLocalized.StringChanged += titleOptionHandler;
         if (opt.descriptionLocalized != null) opt.descriptionLocalized.StringChanged += descriptionOptionHandler;
 
-        // сразу обновим текущие значения
         if (opt.titleLocalized != null) TryRefreshLabel(opt.titleLocalized, titleOptionHandler);
         if (opt.descriptionLocalized != null) TryRefreshLabel(opt.descriptionLocalized, descriptionOptionHandler);
     }

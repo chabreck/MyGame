@@ -96,7 +96,6 @@ public class LocalizationManager : MonoBehaviour
             }
         }
 
-        // fallback en
         var en = available.FirstOrDefault(l => l.Identifier.Code == "en");
         if (en != null)
         {
@@ -132,7 +131,6 @@ public class LocalizationManager : MonoBehaviour
     {
         yield return null;
 
-        // сразу перебиндим всё после загрузки сцены
         var binder = FindObjectOfType<LocalizeAutoBinder>();
         if (binder != null)
             binder.AutoBindAll();

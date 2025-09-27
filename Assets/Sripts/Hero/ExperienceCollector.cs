@@ -25,11 +25,10 @@ public class ExperienceCollector : MonoBehaviour
     private bool isCollected = false;
     private Vector3 startPosition;
     private Rigidbody2D rb;
-    
-    // Статические переменные для управления звуками
+
     private static float lastCollectTime = 0f;
     private static int collectCountThisFrame = 0;
-    private static float collectSoundCooldown = 0.05f; // Минимальное время между звуками
+    private static float collectSoundCooldown = 0.05f;
     
     private void Start()
     {
@@ -119,7 +118,6 @@ public class ExperienceCollector : MonoBehaviour
         
         isCollected = true;
         
-        // Воспроизводим звук сбора с оптимизацией для массового сбора
         PlayOptimizedCollectSound();
         
         if (heroExperience != null)
@@ -137,19 +135,15 @@ public class ExperienceCollector : MonoBehaviour
         float currentTime = Time.time;
         collectCountThisFrame++;
         
-        // Если прошло достаточно времени с последнего звука
         if (currentTime - lastCollectTime >= collectSoundCooldown)
         {
-            // Сбрасываем счетчик и воспроизводим звук
             collectCountThisFrame = 0;
             lastCollectTime = currentTime;
             
-            // Немного уменьшаем громкость при массовом сборе
             float volumeMultiplier = Mathf.Lerp(1f, 0.6f, Mathf.Clamp01(collectCountThisFrame / 10f));
             SettingsManager.Instance.PlaySFX(collectSound, collectSoundVolume * volumeMultiplier);
         }
-        // Если звуков слишком много, пропускаем некоторые
-        else if (collectCountThisFrame % 2 == 0) // Воспроизводим каждый второй звук
+        else if (collectCountThisFrame % 2 == 0)
         {
             float volumeMultiplier = Mathf.Lerp(0.8f, 0.4f, Mathf.Clamp01(collectCountThisFrame / 15f));
             SettingsManager.Instance.PlaySFX(collectSound, collectSoundVolume * volumeMultiplier);
@@ -198,7 +192,6 @@ public class ExperienceCollector : MonoBehaviour
         }
     }
     
-    // Статический метод для сброса счетчиков (например, при переходе между уровнями)
     public static void ResetSoundCounters()
     {
         lastCollectTime = 0f;

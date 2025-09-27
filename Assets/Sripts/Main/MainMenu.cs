@@ -24,7 +24,7 @@ public class MainMenu : MonoBehaviour
     private void Start()
     {
         playButton.onClick.AddListener(StartGame);
-        upgradeButton.onClick.AddListener(OpenUpgradePanel); // Добавлено
+        upgradeButton.onClick.AddListener(OpenUpgradePanel);
         settingsButton.onClick.AddListener(OpenSettings);
         quitButton.onClick.AddListener(QuitGame);
 
@@ -60,7 +60,7 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(levelSceneName);
     }
 
-    public void OpenUpgradePanel() // Добавленный метод
+    public void OpenUpgradePanel()
     {
         if (upgradePanel != null)
         {
@@ -115,7 +115,7 @@ public class MainMenu : MonoBehaviour
             settingsController = SettingsPanelManager.Instance.GetController();
 
         settingsController?.InitializeUI();
-        settingsController?.ResetDropdowns(); // Сбрасываем Dropdown
+        settingsController?.ResetDropdowns();
     }
 
     public void CloseSettings()

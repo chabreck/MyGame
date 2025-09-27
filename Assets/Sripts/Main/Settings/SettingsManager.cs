@@ -73,18 +73,15 @@ public class SettingsManager : MonoBehaviour
 
     void Update()
     {
-        // Обработка F11 вручную, если системная не работает
         if (Input.GetKeyDown(KeyCode.F11))
         {
             ToggleFullscreen();
         }
 
-        // Отслеживаем изменения размера окна
         if (lastScreenWidth != Screen.width || 
             lastScreenHeight != Screen.height || 
             wasFullscreen != Screen.fullScreen)
         {
-            // Если изменение было вызвано F11, обновляем настройки
             if (wasFullscreen != Screen.fullScreen && !ignoreNextFullscreenChange)
             {
                 Debug.Log($"[SettingsManager] Fullscreen mode changed via F11 or system. New value: {Screen.fullScreen}");
@@ -96,7 +93,6 @@ public class SettingsManager : MonoBehaviour
             OnWindowSizeChanged();
         }
         
-        // Сбрасываем флаг игнорирования после одного кадра
         if (ignoreNextFullscreenChange)
         {
             ignoreNextFullscreenChange = false;
@@ -115,8 +111,7 @@ public class SettingsManager : MonoBehaviour
         lastScreenWidth = Screen.width;
         lastScreenHeight = Screen.height;
         wasFullscreen = Screen.fullScreen;
-
-        // Обновляем сохраненные настройки если окно было изменено пользователем
+        
         if (!wasFullscreen)
         {
             PlayerPrefs.SetInt(PREF_RES_WIDTH, Screen.width);
@@ -130,29 +125,20 @@ public class SettingsManager : MonoBehaviour
         UpdateCameraAspect();
         OnSettingsChanged?.Invoke();
         
-        // Убедимся, что курсор правильно работает в оконном режиме
         EnsureCursorState();
     }
     
     private void EnsureCursorState()
     {
-        // В оконном режиме убедимся, что курсор не заблокирован
         if (!Screen.fullScreen)
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
-        // В полноэкранном режиме можно заблокировать курсор, если нужно
-        else
-        {
-            // Здесь можно добавить логику для блокировки курсора в полноэкранном режиме
-            // если это необходимо для вашей игры
-        }
     }
 
     private void InitializeSettings()
     {
-        // создаём источник SFX если его нет
         if (sfxSource == null)
         {
             GameObject go = new GameObject("UI_SFX_Source");
@@ -178,14 +164,11 @@ public class SettingsManager : MonoBehaviour
         int refresh = PlayerPrefs.GetInt(PREF_RES_REFRESH, Screen.currentResolution.refreshRate);
         bool isFullscreen = PlayerPrefs.GetInt(PREF_FULLSCREEN, Screen.fullScreen ? 1 : 0) == 1;
 
-        // Инициализация переменных для отслеживания изменений
         lastScreenWidth = Screen.width;
         lastScreenHeight = Screen.height;
         wasFullscreen = Screen.fullScreen;
 
         ApplyResolution(width, height, refresh, isFullscreen);
-        
-        // Убедимся, что курсор правильно работает
         EnsureCursorState();
     }
 
@@ -202,7 +185,6 @@ public class SettingsManager : MonoBehaviour
 
             if (matches.Length > 0)
             {
-                // Берем максимальную частоту обновления
                 Resolution best = matches
                     .OrderByDescending(r => r.refreshRate)
                     .First();
@@ -211,7 +193,6 @@ public class SettingsManager : MonoBehaviour
             }
             else
             {
-                // Создаем искусственное разрешение с текущей частотой обновления
                 result.Add(new Resolution {
                     width = allowedRes.x,
                     height = allowedRes.y,
@@ -220,7 +201,6 @@ public class SettingsManager : MonoBehaviour
             }
         }
 
-        // Сортируем по ширине, затем по высоте
         return result
             .OrderByDescending(r => r.width)
             .ThenByDescending(r => r.height)
@@ -234,26 +214,21 @@ public class SettingsManager : MonoBehaviour
 
     private void ApplyResolution(int width, int height, int refreshRate, bool fullscreen = false)
     {
-        // Ищем точное совпадение в доступных разрешениях
         Resolution targetRes = availableResolutions.FirstOrDefault(r =>
             r.width == width &&
             r.height == height);
 
         if (targetRes.width == 0)
         {
-            // Если не нашли - используем первое разрешение из списка
             targetRes = availableResolutions[0];
         }
         else
         {
-            // Используем оригинальную частоту обновления
             targetRes.refreshRate = refreshRate;
         }
 
-        // Устанавливаем флаг игнорирования, чтобы не создавать циклическое обновление
         ignoreNextFullscreenChange = true;
 
-        // Устанавливаем разрешение
         Screen.SetResolution(
             targetRes.width,
             targetRes.height,
@@ -261,22 +236,18 @@ public class SettingsManager : MonoBehaviour
             targetRes.refreshRate
         );
 
-        // Сохраняем в PlayerPrefs
         PlayerPrefs.SetInt(PREF_RES_WIDTH, targetRes.width);
         PlayerPrefs.SetInt(PREF_RES_HEIGHT, targetRes.height);
         PlayerPrefs.SetInt(PREF_RES_REFRESH, targetRes.refreshRate);
         PlayerPrefs.SetInt(PREF_FULLSCREEN, fullscreen ? 1 : 0);
         PlayerPrefs.Save();
 
-        // Обновляем переменные отслеживания
         lastScreenWidth = targetRes.width;
         lastScreenHeight = targetRes.height;
         wasFullscreen = fullscreen;
 
-        // Обновляем камеру
         UpdateCameraAspect();
         
-        // Убедимся, что курсор правильно работает
         EnsureCursorState();
     }
 
@@ -323,15 +294,13 @@ public class SettingsManager : MonoBehaviour
     {
         Debug.Log($"[SettingsManager] SetFullscreen called with: {isFullscreen}");
     
-        // Добавим небольшую задержку, чтобы убедиться, что Toggle успел обновиться
         StartCoroutine(SetFullscreenDelayed(isFullscreen));
     }
 
     private IEnumerator SetFullscreenDelayed(bool isFullscreen)
     {
-        yield return null; // Ждем один кадр
+        yield return null;
     
-        // ИСПРАВЛЕНО: получаем текущее разрешение и применяем с новым флагом полноэкранности
         Resolution current = GetCurrentResolution();
         Debug.Log($"[SettingsManager] Applying resolution: {current.width}x{current.height}@{current.refreshRate}Hz, fullscreen: {isFullscreen}");
         ApplyResolution(current.width, current.height, current.refreshRate, isFullscreen);

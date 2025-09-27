@@ -128,19 +128,17 @@ public class EnemyStatus : MonoBehaviour
         float elapsed = 0f;
         while (elapsed < duration && !IsDead)
         {
-            // Используем TakeRawDamage для яда, но с зеленым цветом
             TakeRawDamage(damage);
-            
-            // Уведомляем NervousToxin о тике яда
-            if (NervousToxinBehavior.Instance != null)
+        
+            if (NerveToxinBehavior.Instance != null)
             {
-                NervousToxinBehavior.Instance.OnEnemyPoisonTick(gameObject, damage);
+                NerveToxinBehavior.Instance.OnEnemyPoisonTick(gameObject, damage);
             }
-            
+        
             yield return new WaitForSeconds(interval);
             elapsed += interval;
         }
-        
+    
         if (activeEffects.TryGetValue(EffectType.Poison, out Coroutine routine) && routine != null)
         {
             activeEffects.Remove(EffectType.Poison);

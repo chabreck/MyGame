@@ -28,7 +28,6 @@ public class ShadowFollower : MonoBehaviour
     [Range(0f, 1f)]
     public float followLerp = 0.15f;
 
-    // Внутренние переменные
     private GameObject shadowGO;
     private SpriteRenderer sr;
     private Sprite ovalSprite;
@@ -56,7 +55,6 @@ public class ShadowFollower : MonoBehaviour
     {
         if (shadowGO != null) return;
 
-        // Создаем объект тени
         shadowGO = new GameObject("Shadow");
         shadowGO.transform.SetParent(transform, false);
         shadowGO.transform.localPosition = localOffset;
@@ -64,16 +62,14 @@ public class ShadowFollower : MonoBehaviour
         
         sr = shadowGO.AddComponent<SpriteRenderer>();
 
-        // Создаем овальный спрайт тени
         if (ovalSprite == null)
-            ovalSprite = GenerateOvalSprite(48, 32); // ширина 48, высота 32 для овала
+            ovalSprite = GenerateOvalSprite(48, 32);
             
         sr.sprite = ovalSprite;
         sr.color = shadowColor;
         sr.sortingLayerName = sortingLayerName;
         sr.sortingOrder = orderInLayer;
         
-        // Тень не поворачивается с персонажем
         shadowGO.transform.localEulerAngles = Vector3.zero;
     }
 
@@ -81,18 +77,15 @@ public class ShadowFollower : MonoBehaviour
     {
         if (shadowGO == null) CreateShadow();
 
-        // Позиция тени
         Vector3 targetPos = cachedTransform.position + localOffset;
         shadowGO.transform.position = Vector3.Lerp(shadowGO.transform.position, targetPos, 
             1f - Mathf.Pow(1f - followLerp, Time.deltaTime * 60f));
 
-        // Масштаб в зависимости от высоты (например, при прыжке)
         float h = Mathf.Max(0f, RuntimeHeight);
         float scale = baseScale * (1f - h * 0.3f);
         scale = Mathf.Max(minScale, scale);
         shadowGO.transform.localScale = new Vector3(scale, scale, 1f);
 
-        // Прозрачность в зависимости от высоты
         Color c = shadowColor;
         c.a = shadowColor.a * (1f - h * 0.4f);
         sr.color = c;
@@ -116,10 +109,8 @@ public class ShadowFollower : MonoBehaviour
                 float dx = x - cx;
                 float dy = y - cy;
                 
-                // Формула эллипса: (dx/radiusX)² + (dy/radiusY)² <= 1
                 float ellipseValue = (dx * dx) / (radiusX * radiusX) + (dy * dy) / (radiusY * radiusY);
                 
-                // Создаем мягкие края
                 float t = Mathf.Clamp01((1f - ellipseValue) / 0.3f);
                 Color col = new Color(1f, 1f, 1f, t);
                 tex.SetPixel(x, y, col);
@@ -130,7 +121,7 @@ public class ShadowFollower : MonoBehaviour
 
         Rect rect = new Rect(0, 0, width, height);
         Vector2 pivot = new Vector2(0.5f, 0.5f);
-        Sprite s = Sprite.Create(tex, rect, pivot, 32f); // PPU = 32 как в твоих настройках
+        Sprite s = Sprite.Create(tex, rect, pivot, 32f);
         s.name = "OvalShadowSprite";
         
         return s;

@@ -23,6 +23,14 @@ MonoBehaviour:
     m_Key: singularity_description
     m_Metadata:
       m_Items: []
+  - m_Id: 1000477578350592
+    m_Key: NerveToxin_name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1000481588105216
+    m_Key: NerveToxin_description
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
