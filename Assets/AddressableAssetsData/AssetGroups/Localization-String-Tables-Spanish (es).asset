@@ -17,6 +17,12 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: c0c82a5e0b5c86c40a0d0d14ce2ebf21
   m_SerializeEntries:
+  - m_GUID: 2d3ddcc9669de174191e85971c34b463
+    m_Address: WEATHER_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 343e3fd7cad6f9345a3c7e206209b6c3
     m_Address: UI_es
     m_ReadOnly: 1

@@ -16,7 +16,6 @@ public class NerveToxinBehavior : MonoBehaviour, IWeaponBehavior
             return;
         }
         Instance = this;
-        Debug.Log("NerveToxinBehavior: Instance created");
     }
 
     public void Initialize(GameObject ownerGO, WeaponBase wb, HeroModifierSystem mods, HeroCombat combat)
@@ -24,7 +23,6 @@ public class NerveToxinBehavior : MonoBehaviour, IWeaponBehavior
         owner = ownerGO;
         data = wb as NerveToxinEvolutionData;
         level = 1;
-        Debug.Log($"NerveToxinBehavior: Initialized with owner {ownerGO.name}");
     }
 
     public void Activate() { }
@@ -32,47 +30,29 @@ public class NerveToxinBehavior : MonoBehaviour, IWeaponBehavior
     public void OnUpgrade(int lvl)
     {
         level = Mathf.Clamp(lvl, 1, data != null ? data.maxLevel : lvl);
-        Debug.Log($"NerveToxinBehavior: Upgraded to level {level}");
     }
 
     public void OnEnemyPoisonTick(GameObject enemy, float tickDamage)
     {
-        if (enemy == null) 
-        {
-            Debug.LogWarning("NerveToxinBehavior: enemy is null");
-            return;
-        }
-        
-        if (owner == null)
-        {
-            Debug.LogWarning("NerveToxinBehavior: owner is null");
-            return;
-        }
+        if (enemy == null || owner == null) return;
         
         var enemyStatus = enemy.GetComponent<EnemyStatus>();
-        if (enemyStatus == null)
-        {
-            Debug.LogWarning($"NerveToxinBehavior: enemy {enemy.name} has no EnemyStatus");
-            return;
-        }
+        if (enemyStatus == null) return;
         
         var ppt = enemy.GetComponent<PoisonPulseTracker>();
         if (ppt == null) 
         {
             ppt = enemy.AddComponent<PoisonPulseTracker>();
-            Debug.Log($"NerveToxinBehavior: Added PoisonPulseTracker to {enemy.name}");
         }
         
         float basePulse = data != null ? data.pulseBaseDamage : 6f;
         float radius = data != null ? data.pulseRadius : 2.5f;
         float scale = data != null ? data.pulseScaleFromPoisonTick : 0.25f;
         float xpChance = data != null ? data.xpAttractChancePerPoisonTick : 0.06f;
-        float xpRadius = 1000f;
+        GameObject pulsePrefab = data != null ? data.pulseVisualPrefab : null;
         
-        ppt.Configure(owner, enemy, basePulse, radius, scale, xpChance, xpRadius);
+        ppt.Configure(owner, enemy, basePulse, radius, scale, xpChance, pulsePrefab);
         ppt.OnPoisonTick(tickDamage);
-        
-        Debug.Log($"NerveToxinBehavior: Processed poison tick on {enemy.name}, damage: {tickDamage}");
     }
 
     private void OnDestroy()
@@ -80,7 +60,6 @@ public class NerveToxinBehavior : MonoBehaviour, IWeaponBehavior
         if (Instance == this) 
         {
             Instance = null;
-            Debug.Log("NerveToxinBehavior: Instance destroyed");
         }
     }
 }

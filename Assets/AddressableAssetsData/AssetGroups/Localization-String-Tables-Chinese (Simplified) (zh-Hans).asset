@@ -29,6 +29,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-zh-Hans
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7b6300b1b51f1f84a95b6d407ad9b6f9
+    m_Address: WEATHER_zh-Hans
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-zh-Hans
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9a4dc1542bcb4374e92f5f2235fe23f4
     m_Address: WEAPON_zh-Hans
     m_ReadOnly: 1

@@ -29,6 +29,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-uk
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 73f2a02a183b17f4c9ec4808d0082544
+    m_Address: WEATHER_uk
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-uk
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 818af58c07590024eb29660f68af888e
     m_Address: EVOLUTION_uk
     m_ReadOnly: 1

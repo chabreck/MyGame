@@ -29,6 +29,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-ko
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dc3a24056270cd346949b6d74d377166
+    m_Address: WEATHER_ko
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ko
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f1f4f1910dfc0244da64ba46ee573d8e
     m_Address: WEAPON_ko
     m_ReadOnly: 1

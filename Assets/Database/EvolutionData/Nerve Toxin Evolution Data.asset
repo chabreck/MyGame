@@ -39,8 +39,7 @@ MonoBehaviour:
   pulseBaseDamage: 10
   pulseRadius: 2.5
   pulseScaleFromPoisonTick: 0.25
-  xpAttractChancePerPoisonTick: 0.5
-  xpAttractRadius: 100
+  xpAttractChancePerPoisonTick: 0.01
   pulseVisualPrefab: {fileID: 7581521481845088701, guid: 923d705d233cafa4198551167d7d51cc, type: 3}
   references:
     version: 2

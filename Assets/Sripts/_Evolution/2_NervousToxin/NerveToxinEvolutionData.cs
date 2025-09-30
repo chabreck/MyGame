@@ -8,7 +8,6 @@ public class NerveToxinEvolutionData : WeaponBase
     public float pulseRadius = 2.5f;
     public float pulseScaleFromPoisonTick = 0.25f;
     [Range(0f,1f)] public float xpAttractChancePerPoisonTick = 0.06f;
-    public float xpAttractRadius = 10f;
 
     [Header("Visual")]
     public GameObject pulseVisualPrefab;

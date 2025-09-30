@@ -41,6 +41,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-it
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a8496f3ba5273a744acebf6d5fb75fb4
+    m_Address: WEATHER_it
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-it
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: d64b5c41cb2a0924094401d7a7d02aab, type: 2}
   m_SchemaSet:

@@ -22,7 +22,7 @@ MonoBehaviour:
     m_WaitForCompletion: 0
     m_LocalVariables: []
   weaponName: OrbitalPetal
-  weaponIcon: {fileID: 21300000, guid: b0c046eb9a8b8aa43a20122f4fdda1fc, type: 3}
+  weaponIcon: {fileID: -157768727, guid: fc5a9cafbf201534484ed19c58c7e86a, type: 3}
   tags:
   - OrbitalPetal
   levelEffects:

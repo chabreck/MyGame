@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class HeroMovement : MonoBehaviour
 {
-    [Header("Movement Settings")]
     public float moveSpeed = 5f;
     public float dashSpeed = 15f;
     public float dashDuration = 0.2f;
@@ -16,15 +15,16 @@ public class HeroMovement : MonoBehaviour
     private float nextDash;
     private Vector2 input;
     private float boost;
+    private HeroModifierSystem heroMods;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        if (spriteRenderer == null)
-            spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-        
+        if (spriteRenderer == null) spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         initialScale = transform.localScale;
+        heroMods = GetComponent<HeroModifierSystem>();
+        if (heroMods == null) heroMods = FindObjectOfType<HeroModifierSystem>();
     }
 
     public void SetMovementInput(Vector2 inp) => input = inp;
@@ -48,24 +48,22 @@ public class HeroMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (isDashing)
-            return;
-        
-        rb.velocity = input * (moveSpeed * (1 + boost));
-        
+        if (isDashing) return;
+
+        float moveModifier = 1f;
+        if (heroMods != null) moveModifier = heroMods.GetModifier(StatType.MoveSpeed);
+        float finalSpeed = moveSpeed * moveModifier * (1f + boost);
+        rb.velocity = input * finalSpeed;
+
         if (input.x < 0)
         {
-            if (spriteRenderer != null)
-                spriteRenderer.flipX = true;
-            else
-                transform.localScale = new Vector3(-Mathf.Abs(initialScale.x), initialScale.y, initialScale.z);
+            if (spriteRenderer != null) spriteRenderer.flipX = true;
+            else transform.localScale = new Vector3(-Mathf.Abs(initialScale.x), initialScale.y, initialScale.z);
         }
         else if (input.x > 0)
         {
-            if (spriteRenderer != null)
-                spriteRenderer.flipX = false;
-            else
-                transform.localScale = new Vector3(Mathf.Abs(initialScale.x), initialScale.y, initialScale.z);
+            if (spriteRenderer != null) spriteRenderer.flipX = false;
+            else transform.localScale = new Vector3(Mathf.Abs(initialScale.x), initialScale.y, initialScale.z);
         }
     }
 

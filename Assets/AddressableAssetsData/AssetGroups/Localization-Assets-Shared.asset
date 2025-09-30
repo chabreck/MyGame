@@ -17,6 +17,11 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 3b14dd3d1f3f22d4ab951d5610f1d95c
   m_SerializeEntries:
+  - m_GUID: 116bb61f7ba61ec45932c4855efabb8d
+    m_Address: Assets/Localization/WEATHER/WEATHER Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 53060c94993459343a52cec5f203ab05
     m_Address: Assets/Localization/UPGRADE/UPGRADE Shared Data.asset
     m_ReadOnly: 1

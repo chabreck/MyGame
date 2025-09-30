@@ -29,6 +29,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-ja
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7795e0f1314baa448991969e772ff3c9
+    m_Address: WEATHER_ja
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ja
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8efb42ca0ded6464181a883aee9e5d64
     m_Address: UI_ja
     m_ReadOnly: 1

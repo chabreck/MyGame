@@ -23,6 +23,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-fr
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7bf1957b2efe1c842bb71c2354739e75
+    m_Address: WEATHER_fr
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fr
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a308d0621e587b34193c85e79e8afe0a
     m_Address: WEAPON_fr
     m_ReadOnly: 1

@@ -41,8 +41,8 @@ MonoBehaviour:
   fieldBaseDamage: 10
   firstContactBonusDamage: 25
   slowFactor: 0.5
-  absorbRadiusPerCloud: 0.02
-  absorbDamagePerCloud: 0.02
+  absorbRadiusPerCloud: 0.03
+  absorbDamagePerCloud: 0.03
   absorbCheckInterval: 0.5
   tickInterval: 1
   references:

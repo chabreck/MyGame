@@ -40,27 +40,27 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4627965533605888
-    m_Key: DistortedCloth_name
+    m_Key: ShatterSpikes_name
     m_Metadata:
       m_Items: []
   - m_Id: 4627968012439552
-    m_Key: DistortedCloth_lvl1
+    m_Key: ShatterSpikes_lvl1
     m_Metadata:
       m_Items: []
   - m_Id: 4627970889732096
-    m_Key: DistortedCloth_lvl2
+    m_Key: ShatterSpikes_lvl2
     m_Metadata:
       m_Items: []
   - m_Id: 4627972873637888
-    m_Key: DistortedCloth_lvl3
+    m_Key: ShatterSpikes_lvl3
     m_Metadata:
       m_Items: []
   - m_Id: 4627974501027840
-    m_Key: DistortedCloth_lvl4
+    m_Key: ShatterSpikes_lvl4
     m_Metadata:
       m_Items: []
   - m_Id: 4628102754455552
-    m_Key: DistortedCloth_lvl5
+    m_Key: ShatterSpikes_lvl5
     m_Metadata:
       m_Items: []
   - m_Id: 6080511666147328

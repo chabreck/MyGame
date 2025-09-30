@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be51871efa6c3e4eae1703925c8f5ac, type: 3}
+  m_Name: WEATHER
+  m_EditorClassIdentifier: 
+  m_SharedTableData: {fileID: 11400000, guid: 116bb61f7ba61ec45932c4855efabb8d, type: 2}
+  m_Tables:
+  - {fileID: 11400000, guid: d377a5faa819e8b43ac560741d840f88, type: 2}
+  - {fileID: 11400000, guid: c9b4e33363257c14db5835df50d404ca, type: 2}
+  - {fileID: 11400000, guid: 7b6300b1b51f1f84a95b6d407ad9b6f9, type: 2}
+  - {fileID: 11400000, guid: 2d3ddcc9669de174191e85971c34b463, type: 2}
+  - {fileID: 11400000, guid: dd17c5aaa88ec504481ecab078981c3a, type: 2}
+  - {fileID: 11400000, guid: 9fc8ec5d0f84b734e96fce69bd3441f1, type: 2}
+  - {fileID: 11400000, guid: 7795e0f1314baa448991969e772ff3c9, type: 2}
+  - {fileID: 11400000, guid: 9130281ceb51aa842a8b731cb3a18fcb, type: 2}
+  - {fileID: 11400000, guid: dc3a24056270cd346949b6d74d377166, type: 2}
+  - {fileID: 11400000, guid: 2c9754884e8da8e4fb0ddbca9b261736, type: 2}
+  - {fileID: 11400000, guid: a8496f3ba5273a744acebf6d5fb75fb4, type: 2}
+  - {fileID: 11400000, guid: 73f2a02a183b17f4c9ec4808d0082544, type: 2}
+  - {fileID: 11400000, guid: 7bf1957b2efe1c842bb71c2354739e75, type: 2}
+  m_Extensions: []
+  m_Group: String Table
+  references:
+    version: 2
+    RefIds: []

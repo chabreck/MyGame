@@ -23,6 +23,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-pl
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9130281ceb51aa842a8b731cb3a18fcb
+    m_Address: WEATHER_pl
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pl
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9c8d792887a876746974bce571dc54be
     m_Address: WEAPON_pl
     m_ReadOnly: 1

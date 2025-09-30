@@ -35,6 +35,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-ru
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c9b4e33363257c14db5835df50d404ca
+    m_Address: WEATHER_ru
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e501ded7408d88e449585e3e067b2990
     m_Address: WEAPON_ru
     m_ReadOnly: 1

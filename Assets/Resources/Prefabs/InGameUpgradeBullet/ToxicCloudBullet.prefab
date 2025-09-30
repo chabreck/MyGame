@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4561628879036298797}
   m_Layer: 8
   m_Name: ToxicCloudBullet
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -122,7 +122,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.27
+  m_Radius: 0.23
 --- !u!50 &2323369722501785279
 Rigidbody2D:
   serializedVersion: 4
@@ -162,6 +162,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f247681bb9b4437bbb5441f0bfa551a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifetime: 3
+  isPermanent: 0
 --- !u!95 &4561628879036298797
 Animator:
   serializedVersion: 5

@@ -170,6 +170,37 @@ public class ExperienceCollector : MonoBehaviour
         Destroy(gameObject);
     }
     
+    public void AttractTo(Transform playerTransform)
+    {
+        if (isCollected) return;
+
+        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+        if (playerObj != null)
+        {
+            player = playerObj.transform;
+            heroExperience = playerObj.GetComponent<HeroExperience>();
+        }
+        else if (playerTransform != null)
+        {
+            player = playerTransform;
+            heroExperience = playerTransform.GetComponent<HeroExperience>();
+        }
+
+        if (player == null) return;
+
+        if (!isBeingAttracted)
+        {
+            StartAttraction();
+        
+            float currentDistance = Vector2.Distance(transform.position, player.position);
+            if (currentDistance > magneticRange)
+            {
+                Vector3 direction = (player.position - transform.position).normalized;
+                transform.position = player.position - direction * magneticRange * 0.5f;
+            }
+        }
+    }
+    
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;

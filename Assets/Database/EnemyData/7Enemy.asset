@@ -17,7 +17,7 @@ MonoBehaviour:
   damage: 175
   speed: 1
   damageCooldown: 0
-  spawnTime: 0
+  spawnTime: 1000
   expReward: 100
   prefab: {fileID: 2027268394459525515, guid: 3b6193224b99bad43953efb99041086f, type: 3}
   attackType: 0
