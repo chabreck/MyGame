@@ -3,7 +3,7 @@
 [RequireComponent(typeof(Collider2D))]
 public class HealthPickup : MonoBehaviour
 {
-    public float healAmount = 50f;
+    public float healAmount = 100f;
     public AudioClip collectSound;
 
     private void OnTriggerEnter2D(Collider2D other)

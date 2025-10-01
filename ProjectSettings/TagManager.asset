@@ -14,7 +14,7 @@ TagManager:
   - FullScreenToggle
   - XPOrb
   - Projectile
-  - PlayerWeapon
+  - PlayerHurtbox
   layers:
   - Default
   - TransparentFX
@@ -28,7 +28,7 @@ TagManager:
   - Pickup
   - EnemyHurtbox
   - NonCollisionForEnemy
-  - 
+  - PlayerHurtbox
   - 
   - 
   - 

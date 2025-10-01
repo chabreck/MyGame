@@ -83,8 +83,7 @@ MonoBehaviour:
   slowFactor: 0.4
   level2_extraDuration: 2
   level4_dpsMultiplier: 1.2
-  level5_convergeCount: 3
-  level5_convergeDamage: 30
+  level5_maxClouds: 4
   cloudPrefab: {fileID: 3331113060761760566, guid: d60eef144b9399f41aaf91e9fa98f010, type: 3}
   references:
     version: 2

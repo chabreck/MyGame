@@ -29,6 +29,18 @@ public static class DamageHelper
         return 1f;
     }
 
+    public static void ApplyDamage(GameObject source, BreakableLoot loot, float baseDamage, bool raw = false, DamagePopup.DamageType popupType = DamagePopup.DamageType.Normal, DamageSourceType sourceType = DamageSourceType.Weapon)
+    {
+        if (loot == null) return;
+        
+        float mult = GetDamageMultiplier(source);
+        float final = baseDamage * mult;
+
+        loot.TakeDamage(final);
+
+        OnDamageApplied?.Invoke(source, loot.transform != null ? loot.transform.position : Vector3.zero, sourceType);
+    }
+    
     public static void ApplyDamage(GameObject source, EnemyStatus es, float baseDamage, bool raw = false, DamagePopup.DamageType popupType = DamagePopup.DamageType.Normal, DamageSourceType sourceType = DamageSourceType.Weapon)
     {
         if (es == null) return;

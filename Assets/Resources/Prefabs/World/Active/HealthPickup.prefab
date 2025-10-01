@@ -161,5 +161,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dc1d6a456a74252bb614fce280657e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healAmount: 50
-  collectSound: {fileID: 8300000, guid: 6f2acc7d46caa334981f19ea5b5daa52, type: 3}
+  healAmount: 100
+  collectSound: {fileID: 8300000, guid: 6283e1177ccb19c4ea80bdd466332efc, type: 3}

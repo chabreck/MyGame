@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5560443426091526212}
   - component: {fileID: -6889511497785981377}
   - component: {fileID: 2323369722501785279}
-  - component: {fileID: 4197719419386273091}
+  - component: {fileID: 7632184156242924955}
   - component: {fileID: 4561628879036298797}
   m_Layer: 8
   m_Name: ToxicCloudBullet
@@ -150,7 +150,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &4197719419386273091
+--- !u!114 &7632184156242924955
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

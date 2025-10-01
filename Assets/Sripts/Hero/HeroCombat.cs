@@ -8,7 +8,7 @@ public class HeroCombat : MonoBehaviour
 {
     private List<WeaponInstance> equipped = new List<WeaponInstance>();
     private HeroModifierSystem mods;
-    public event Action<Vector3> OnAttack;
+    public event Action<Vector2> OnAttack;
 
     private void Awake()
     {

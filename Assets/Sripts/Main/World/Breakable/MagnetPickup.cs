@@ -10,11 +10,8 @@ public class MagnetPickup : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("Player")) return;
-        var mods = other.GetComponent<HeroModifierSystem>();
-        if (mods != null)
-        {
-            mods.AddModifier(StatType.CollectionSpeed, collectionRadiusBonus, magnetDuration);
-        }
+        var playerTransform = other.transform;
+        ExperienceCollector.AttractAllTo(playerTransform, 25f, magnetDuration);
         if (collectSound != null) AudioSource.PlayClipAtPoint(collectSound, transform.position, 0.7f);
         Destroy(gameObject);
     }
